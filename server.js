@@ -1,15 +1,3 @@
-// where your node app starts
-
-// init project
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-var randomWords = require('random-words');
-var FS = require('file-system');
-
-var info = JSON.parse(FS.readFileSync("info.json"));
-
 //Discord
 const Discord = require('discord.js');
 const bot = new Discord.Client();
@@ -52,26 +40,3 @@ bot.on("message", (message) => {
 });
 
 bot.login(NzY4MTkzNzI4NjkwMTI2ODg5.X486KQ.8Z0rAPMyEuZfZlakUDmn9RxoQww);
-
-// http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
-
-// http://expressjs.com/en/starter/basic-routing.html
-app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/views/index.html');
-});
-
-// listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
-  console.log('Your app is listening on port ' + listener.address().port);
-});
-
-//Save
-function save(){
-  FS.writeFile("info.json", JSON.stringify(info));
-}
-
-//Choose a random item from an array
-function choose(arr){
-  return arr[Math.floor(Math.random()*arr.length)];
-}
