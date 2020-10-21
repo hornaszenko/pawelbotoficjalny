@@ -36,7 +36,5 @@ bot.on("message", (message) => {
     if (msg=="s!help"){ //If someone says "hello bot",
       message.channel.send("nie ma tu żadnych komend"); //say "hello hooman"
     }
-  }
-});
 
-bot.login(NzY4MTkzNzI4NjkwMTI2ODg5.X486KQ.8Z0rAPMyEuZfZlakUDmn9RxoQww);
+bot.login("NzY4MTkzNzI4NjkwMTI2ODg5.X486KQ.8Z0rAPMyEuZfZlakUDmn9RxoQww");
