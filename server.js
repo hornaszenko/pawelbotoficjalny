@@ -51,7 +51,7 @@ bot.on("message", (message) => {
   }
 });
 
-bot.login(process.env.TOKEN);
+bot.login(NzY4MTkzNzI4NjkwMTI2ODg5.X486KQ.8Z0rAPMyEuZfZlakUDmn9RxoQww);
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
