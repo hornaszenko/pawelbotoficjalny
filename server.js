@@ -8,6 +8,7 @@ bot.on("ready", () => {
 
 bot.on("message", (message) => {
   let msg = message.content;
+  if (message.author.id == "768193728690126889") return;
   
   //Commands
   if (msg.substring(0, 2)=="s!"){ //Command prefix, like !command
