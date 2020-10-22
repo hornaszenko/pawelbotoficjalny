@@ -39,6 +39,17 @@ bot.on("message", (message) => {
         message.channel.send(embed).then(embedMessage => {
           embedMessage.react("👍");
           embedMessage.react("👎");
+          
+          case "test":
+        const args = message.content.slice(7).trim().split(/ +/g);
+        let suggestion = args.slice(0).join(" ");
+
+        let embed = new Discord.MessageEmbed()
+        embed.setColor("#55FFFF")
+        embed.setDescription(test)
+        embed.setFooter(abc)
+
+        message.channel.send(embed)
         });
       break;
     }
