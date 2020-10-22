@@ -39,9 +39,11 @@ bot.on("message", (message) => {
         message.channel.send(embed).then(embedMessage => {
           embedMessage.react("👍");
           embedMessage.react("👎");
+        });
+      break;
     }
   }
-});
+});       
 
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 
