@@ -23,7 +23,7 @@ bot.on("message", (message) => {
       case "help":
         let embed = new Discord.MessageEmbed()
         embed.setColor("#55FFFF")
-        embed.setDescripiton("**Komendy 4FUN** -h!zupa")
+        embed.setDescripiton("**test")
         embed.setFooter("abc")
         message.channel.send(embed)
       case "zupa":
