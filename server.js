@@ -10,7 +10,7 @@ bot.on("message", (message) => {
   let msg = message.content;
   
   //Commands
-  if (msg.substring(0, 1)=="!"){ //Command prefix, like !command
+  if (msg.substring(0, 1)=="s!"){ //Command prefix, like !command
     let str = msg.substring(1, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
@@ -32,9 +32,5 @@ bot.on("message", (message) => {
     }
   }
 });
-
-    if (msg=="s!help"){ //If someone says "hello bot",
-      message.channel.send("nie ma tu żadnych komend"); //say "hello hooman"
-    }
 
 bot.login("NzY4MTkzNzI4NjkwMTI2ODg5.X486KQ.8Z0rAPMyEuZfZlakUDmn9RxoQww");
