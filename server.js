@@ -10,11 +10,11 @@ bot.on("message", (message) => {
   let msg = message.content;
   
   //Commands
-  if (msg.substring(0, 1)=="s!"){ //Command prefix, like !command
-    let str = msg.substring(1, msg.length);
+  if (msg.substring(0, 2)=="s!"){ //Command prefix, like !command
+    let str = msg.substring(2, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
-    args.splice(0, 1);
+    args.splice(0, 2);
     
     //Commands
     switch (cmd){ //Commands here
