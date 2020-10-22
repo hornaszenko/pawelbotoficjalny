@@ -21,7 +21,11 @@ bot.on("message", (message) => {
 
     switch (cmd){
       case "help":
-        message.channel.send("Komendy: help, zupa, poll");
+        let embed = new Discord.MessageEmbed()
+        embed.setColor("#55FFFF")
+        embed.setDescripiton("**Komendy 4FUN** -h!zupa")
+        embed.setFooter("abc")
+        message.channel.send(embed)
       case "zupa":
         message.channel.send("po twojej pysznej zupie");
         message.react('🥣');
