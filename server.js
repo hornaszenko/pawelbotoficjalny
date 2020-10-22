@@ -22,9 +22,6 @@ bot.on("message", (message) => {
     switch (cmd){
       case "help":
         message.channel.send("Tu nic nie ma.");
-      break;
-    }
-     switch (cmd){
       case "zupa":
         message.channel.send("po twojej pysznej zupie");
       break;
