@@ -13,6 +13,26 @@ bot.on("message", (message) => {
     message.channel.send("wilkommen")
   }
   
+  client.on('message', message => {
+  if (message.content.startsWith('.test')) {
+
+        const channel = message.guild.channels.find('name', 'polls');
+        const args = message.content.slice(12).trim().split(/ +/g);
+        let suggestion = args.slice(0).join(" ");
+        if (!channel) return;
+
+        let embed = new Discord.RichEmbed()
+        .setColor("#55FFFF")
+        .setDescription('test')
+        .setFooter('test', client.user.avatarURL)
+
+    channel.send(embed);
+    message.react("👍")
+    message.react("👎");
+
+  }
+});
+  
   if (msg.substring(0, 2)=="s!"){
     let str = msg.substring(2, msg.length);
     let args = str.split(' ');
