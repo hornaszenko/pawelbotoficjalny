@@ -15,15 +15,13 @@ bot.on("message", (message) => {
     let cmd = args[0];
     args.splice(0, 2);
     
-    switch (msg){  // Odpowiedzi na normalne wiadomości
-      case "witam":
-        message.channel.send("wilkommen");
-      break;
+    if(message.content == "witam") {
+      message.channel.send("wilkommen")
     }
 
     switch (cmd){  // Komendy
       case "help":
-        message.channel.send("Tu nic nie ma ¯\_(ツ)_/¯");
+        message.channel.send("Tu nic nie ma.");
       break;
     }
   }
