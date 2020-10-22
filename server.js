@@ -24,6 +24,7 @@ bot.on("message", (message) => {
         message.channel.send("Tu nic nie ma.");
       case "zupa":
         message.channel.send("po twojej pysznej zupie");
+        message.react('🥣');
       break;
     }
   }
