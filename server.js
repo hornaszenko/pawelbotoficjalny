@@ -14,10 +14,6 @@ bot.on("message", (message) => {
     message.react('👋');
   }
   
-  if(msg == "h!ping") {
-     message.channel.send(`🏓Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
-  }
-  
  if(msg == "<@768193728690126889>") {
     message.channel.send("No ale prefixu zapomniałeś? Trzymaj tu: s!")
   }
@@ -40,7 +36,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
        embed.setDescription("**Pomoc**")
-     embed.addField("Komendy ogólne", "s!poll");
+     embed.addField("Komendy do głosowania", "s!ankieta like");
      embed.addField("Komendy 4FUN", "s!zupa");
       message.channel.send(embed)
     }
@@ -48,7 +44,7 @@ bot.on("message", (message) => {
       message.channel.send("po twojej pysznej zupie");
       message.react('🥣');
     }
-    else if (cmd == "poll") {  
+    else if (cmd == "ankieta like") {  
       const args = message.content.slice(7).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
 
@@ -61,7 +57,35 @@ bot.on("message", (message) => {
       message.channel.send(embed).then(embedMessage => {
         embedMessage.react("👍");
         embedMessage.react("👎");
-      });
+      }
+      else if (cmd == "ankieta a b") {  
+      const args = message.content.slice(7).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+
+      message.delete();
+
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(message.author.tag)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+              else if (cmd == "propozycja") {  
+      const args = message.content.slice(7).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+
+      message.delete();
+
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter("🟩 - tak, 🟨 - nie mam zdania, 🟥 nie.)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🟩");
+        embedMessage.react("🟨");
+        embedMessage.react("🟥");
+   ;]}
     }  
     else {
       return;
