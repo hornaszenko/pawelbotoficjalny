@@ -13,6 +13,14 @@ bot.on("message", (message) => {
     message.channel.send("wilkommen")
   }
   
+   if(msg == "nie ruszam dupy z klopa") {
+    message.channel.send("ta zupa była z mlekiem")
+  }
+  
+   if(msg == "na mleko mam alergie") {
+    message.channel.send("po twojej pysznej zupie")
+  }
+  
   if (msg.substring(0, 2)=="s!"){
     let str = msg.substring(2, msg.length);
     let args = str.split(' ');
