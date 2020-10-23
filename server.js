@@ -19,32 +19,35 @@ bot.on("message", (message) => {
     let cmd = args[0];
     args.splice(0, 2);
 
-    switch (cmd){
-      case "help":
-        var embed = new Discord.MessageEmbed()
-        embed.setColor("#55FFFF")
-        embed.setDescription("**test")
-        embed.setFooter("abc")
-        message.channel.send(embed)
-      case "zupa":
-        message.channel.send("po twojej pysznej zupie");
-        message.react('🥣');
-      case "poll":
-        const args = message.content.slice(7).trim().split(/ +/g);
-        let suggestion = args.slice(0).join(" ");
+    if (cmd == "help") {
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("**test")
+      embed.setFooter("abc")
+      message.channel.send(embed)
+    }
+    else if (cmd == "zupa") {
+      message.channel.send("po twojej pysznej zupie");
+      message.react('🥣');
+    }
+    else if (cmd == "poll") {  
+      const args = message.content.slice(7).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
 
-        message.delete();
+      message.delete();
 
-        var embed = new Discord.MessageEmbed()
-        embed.setColor("#55FFFF")
-        embed.setDescription(suggestion)
-        embed.setFooter(message.author.tag)
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(message.author.tag)
 
-        message.channel.send(embed).then(embedMessage => {
-          embedMessage.react("👍");
-          embedMessage.react("👎");
-        });
-      break;
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("👍");
+        embedMessage.react("👎");
+      });
+    }  
+    else {
+      return;
     }
   }
 });       
