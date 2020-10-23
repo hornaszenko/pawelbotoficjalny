@@ -21,7 +21,7 @@ bot.on("message", (message) => {
 
     switch (cmd){
       case "help":
-        let embed = new Discord.MessageEmbed()
+        var embed = new Discord.MessageEmbed()
         embed.setColor("#55FFFF")
         embed.setDescription("**test")
         embed.setFooter("abc")
@@ -35,7 +35,7 @@ bot.on("message", (message) => {
 
         message.delete();
 
-        let embed = new Discord.MessageEmbed()
+        var embed = new Discord.MessageEmbed()
         embed.setColor("#55FFFF")
         embed.setDescription(suggestion)
         embed.setFooter(message.author.tag)
