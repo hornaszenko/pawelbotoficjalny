@@ -54,10 +54,16 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setDescription(suggestion)
       embed.setFooter(message.author.tag)
-
       message.channel.send(embed).then(embedMessage => {
         embedMessage.react("👍");
         embedMessage.react("👎");
+           else if (cmd == "ping") { 
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescripiton("🏓Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
+  }")
+      embed.setFooter("message.author.tag")
+      message.channel.send(embed)
       });
     }  
     else {
