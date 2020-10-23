@@ -21,11 +21,11 @@ bot.on("message", (message) => {
 
     switch (cmd){
       case "help":
-        let helpembed = new Discord.MessageEmbed()
-        helpembed.setColor("#55FFFF")
-        helpembed.setDescripiton("**test")
-        helpembed.setFooter("abc")
-        message.channel.send(helpembed)
+        let embed = new Discord.MessageEmbed()
+        embed.setColor("#55FFFF")
+        embed.setDescription("**test")
+        embed.setFooter("abc")
+        message.channel.send(embed)
       case "zupa":
         message.channel.send("po twojej pysznej zupie");
         message.react('🥣');
@@ -35,12 +35,12 @@ bot.on("message", (message) => {
 
         message.delete();
 
-        let pollembed = new Discord.MessageEmbed()
-        pollembed.setColor("#55FFFF")
-        pollembed.setDescription(suggestion)
-        pollembed.setFooter(message.author.tag)
+        let embed = new Discord.MessageEmbed()
+        embed.setColor("#55FFFF")
+        embed.setDescription(suggestion)
+        embed.setFooter(message.author.tag)
 
-        message.channel.send(pollembed).then(embedMessage => {
+        message.channel.send(embed).then(embedMessage => {
           embedMessage.react("👍");
           embedMessage.react("👎");
         });
