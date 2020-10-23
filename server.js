@@ -14,6 +14,10 @@ bot.on("message", (message) => {
     message.react('👋');
   }
   
+  if(msg == "h!ping") {
+     message.channel.send(`🏓Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
+  }
+  
  if(msg == "<@768193728690126889>") {
     message.channel.send("No ale prefixu zapomniałeś? Trzymaj tu: s!")
   }
@@ -57,13 +61,6 @@ bot.on("message", (message) => {
       message.channel.send(embed).then(embedMessage => {
         embedMessage.react("👍");
         embedMessage.react("👎");
-           else if (cmd == "ping") { 
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescripiton("🏓Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
-  }")
-      embed.setFooter("message.author.tag")
-      message.channel.send(embed)
       });
     }  
     else {
