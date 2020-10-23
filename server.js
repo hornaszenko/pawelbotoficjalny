@@ -85,7 +85,7 @@ bot.on("message", (message) => {
         embedMessage.react("🟩");
         embedMessage.react("🟨");
         embedMessage.react("🟥");
-   ;]}
+   });
     }  
     else {
       return;
