@@ -13,6 +13,10 @@ bot.on("message", (message) => {
     message.channel.send("wilkommen")
   }
   
+ if(msg == "<@768193728690126889>") {
+    message.channel.send("No ale prefixu zapomniałeś? Trzymaj tu: s!")
+  }
+  
    if(msg == "nie ruszam dupy z klopa") {
     message.channel.send("ta zupa była z mlekiem")
   }
