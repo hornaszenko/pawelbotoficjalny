@@ -23,7 +23,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**Pomoc**")
-      embed.setFooter("**Komendy ogólne** - h!poll **Komendy 4FUN** - h!zupa")
+      embed.setFooter("**Komendy ogólne** - s!poll **Komendy 4FUN** - s!zupa")
       message.channel.send(embed)
     }
     else if (cmd == "zupa") {
