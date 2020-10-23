@@ -18,7 +18,7 @@ bot.on("message", (message) => {
   }
   
    if(msg == "na mleko mam alergie") {
-    message.channel.send("po twojej pysznej zupie")
+    message.channel.send("po-po-po twojej pysznej zupie")
   }
   
   if (msg.substring(0, 2)=="s!"){
