@@ -36,7 +36,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**Pomoc**")
-      embed.addField("Komendy do głosowania", "s!ankieta");
+      embed.addField("Komendy do głosowania", "s!propozycja");
       embed.addField("Komendy 4FUN", "s!zupa");
       message.channel.send(embed)
     }
@@ -44,7 +44,7 @@ bot.on("message", (message) => {
       message.channel.send("po twojej pysznej zupie");
       message.react('🥣');
     }
-    else if (cmd == "ankieta") {  
+    else if (cmd == "propozycja") {  
       const args = message.content.slice(7).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
 
@@ -53,7 +53,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription(suggestion)
-      embed.setFooter(`Twórca ankiety: ${message.author.tag}. \s 🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie.`)
+      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca ankiety: ${message.author.tag}.`)
       message.channel.send(embed).then(embedMessage => {
         embedMessage.react("🟩");
         embedMessage.react("🟨");
