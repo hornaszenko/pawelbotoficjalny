@@ -44,11 +44,15 @@ bot.on("message", (message) => {
       message.channel.send("po twojej pysznej zupie");
       message.react('🥣');
     }
-    else if (cmd == "losowa liczba") {
-    const m = await message.channel.send("liczba sie losuje...");
-    m.edit("i tą liczbą jest...");
-    m.edit(Math.random());
-  }
+    
+     else if (cmd == "komentarz") {
+      let args = message.content.substring(PREFIX.length).split(" "); // args = ['say', 'Hello', 'World']
+
+      bot.commands.get("say").execute(message, args); // Passing in the entire args array
+
+      const sayMessage = args.join(" "); // sayMessage = 'say Hello World'
+     }
+    
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
