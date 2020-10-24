@@ -53,7 +53,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription(suggestion)
-      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca ankiety: ${message.author.tag}.`)
+      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji: ${message.author.tag}.`)
       message.channel.send(embed).then(embedMessage => {
         embedMessage.react("🟩");
         embedMessage.react("🟨");
