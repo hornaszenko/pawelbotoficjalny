@@ -45,7 +45,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("Wiadomość")
-      embed.addField("suggestion");
+      embed.addField(suggestion);
       message.channel.send(embed)
     }
     
