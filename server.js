@@ -40,12 +40,9 @@ bot.on("message", (message) => {
       embed.addField("Komendy 4FUN", "s!zupa");
       message.channel.send(embed)
     }
-    
     else if (cmd == "zupa") {
       message.channel.send("po twojej pysznej zupie");
       message.react('🥣');
-    }
-     
     }
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
