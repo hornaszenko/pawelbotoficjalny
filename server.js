@@ -45,7 +45,7 @@ bot.on("message", (message) => {
       message.react('🥣');
     }
     else if (cmd == "propozycja") {  
-      const args = message.content.slice(7).trim().split(/ +/g);
+      const args = message.content.slice(10).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
 
       message.delete();
