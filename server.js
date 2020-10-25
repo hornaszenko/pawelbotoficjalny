@@ -45,12 +45,6 @@ bot.on("message", (message) => {
       message.react('🥣');
     }
     
-       else if (cmd == "lRtnse423") {
-       channel.delete()
-      .then(console.log)
-      .catch(console.error);
-       }
-    
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
