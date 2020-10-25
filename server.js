@@ -45,13 +45,9 @@ bot.on("message", (message) => {
       message.react('🥣');
     }
     
-     else if (cmd == "komentarz") {
-      let args = message.content.substring(PREFIX.length).split(" "); // args = ['say', 'Hello', 'World']
-
-      bot.commands.get("say").execute(message, args); // Passing in the entire args array
-
-      const sayMessage = args.join(" "); // sayMessage = 'say Hello World'
-     }
+       else if (cmd == "awatar") {
+      message.channel.send(.avatar);
+       }
     
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
