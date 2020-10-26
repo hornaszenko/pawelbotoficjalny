@@ -13,7 +13,13 @@ bot.on("message", (message) => {
     message.channel.send("wilkommen")
     message.react('👋');
   }
-  
+
+  if (msg.toLowerCase() == "penis") {
+    message.react('🤣');
+    message.react('😂');
+    message.react('😹');
+  }
+
   if(msg == "<@768193728690126889>") {
     message.channel.send("No ale prefixu zapomniałeś? Trzymaj tu: s!")
   }
@@ -40,6 +46,7 @@ bot.on("message", (message) => {
       embed.addField("Komendy 4FUN", "s!zupa");
       message.channel.send(embed)
     }
+
     else if (cmd == "zupa") {
       message.channel.send("po twojej pysznej zupie");
       message.react('🥣');
@@ -60,7 +67,8 @@ bot.on("message", (message) => {
         embedMessage.react("🟨");
         embedMessage.react("🟥");
       });
-    }       
+    }
+
     else {
       return;
     }  
