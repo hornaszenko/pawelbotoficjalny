@@ -40,11 +40,11 @@ bot.on("message", (message) => {
   } 
   
         if (msg.toLowerCase() == "gdy juz nie bede sam") {
-     message.channel.send("bo wjedzie biały węgorz (**WAŻNY ALERT** - jeśli zaczynasz piosenkę to napisz dalej tylko jedno w głowie mam a jeśli potwarasz refren drugi raz to pisz ciąg dalszy piosenki (tekst: https://www.tekstowo.pl/piosenka,cypis,gdzie_jest_bialy_wegorz____zejscie_.html)")
+     message.channel.send("bo wjedzie biały węgorz (**WAŻNY ALERT** - jeśli zaczynasz piosenkę to napisz dalej tylko jedno w głowie mam a jeśli potwarasz refren drugi raz to pisz ciąg dalszy piosenki (tekst: ``https://www.tekstowo.pl/piosenka,cypis,gdzie_jest_bialy_wegorz____zejscie_.html``)")
   } 
   
          if (msg.toLowerCase() == "gdy już nie będę sam") {
-     message.channel.send("bo wjedzie biały węgorz (**WAŻNY ALERT** - jeśli zaczynasz piosenkę to napisz dalej tylko jedno w głowie mam a jeśli potwarasz refren drugi raz to pisz ciąg dalszy piosenki (tekst: https://www.tekstowo.pl/piosenka,cypis,gdzie_jest_bialy_wegorz____zejscie_.html)")
+     message.channel.send("bo wjedzie biały węgorz (**WAŻNY ALERT** - jeśli zaczynasz piosenkę to napisz dalej tylko jedno w głowie mam a jeśli potwarasz refren drugi raz to pisz ciąg dalszy piosenki (tekst:``https://www.tekstowo.pl/piosenka,cypis,gdzie_jest_bialy_wegorz____zejscie_.html``)")
   } 
   
         if (msg.toLowerCase() == "tylko jedno w głowie mam") {
