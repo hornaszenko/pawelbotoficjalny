@@ -69,18 +69,23 @@ bot.on("message", (message) => {
       if (msg.toLowerCase() == "jak wilkołak do księżyca"
      message.channel.send("w głowie dziury ulica")
   } 
+  
         if (msg.toLowerCase() == "jak wilkolak do ksiezyca"
      message.channel.send("w głowie dziury ulica")
   } 
+  
         if (msg.toLowerCase() == "przed twoją chatą"
      message.channel.send("rozpuszczam się jak baton")
   } 
+  
        if (msg.toLowerCase() == "przed twoja chata"
      message.channel.send("rozpuszczam się jak baton")
   } 
+  
        if (msg.toLowerCase() == "który leży na blacie"
      message.channel.send("zejście jest jak nie wciągacie")
   } 
+  
          if (msg.toLowerCase() == "ktory lezy na blacie"
      message.channel.send("zejście jest jak nie wciągacie (SOONTM dalsza piosenka nie chce mi się robić narazie ja tez czlowiek ok)")
   } 
