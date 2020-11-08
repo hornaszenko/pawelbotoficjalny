@@ -50,50 +50,22 @@ bot.on("message", (message) => {
         if (msg.toLowerCase() == "tylko jedno w głowie mam") {
      message.channel.send("koksu pięć gram")
   } 
+  
        if (msg.toLowerCase() == "tylko jedno w glowie mam") {
      message.channel.send("koksu pięć gram")
   } 
   
-       if (msg.toLowerCase() == "ja pierdole ale mam zjazd"
-     message.channel.send("nie chwytam gwiazd jak kłoda leże")
+           if (msg.toLowerCase() == "ja pierdole ale mam zjazd") {
+     message.channel.send("nie chwytam gwiazd jak kłoda leżę")
   } 
- 
-       if (msg.toLowerCase() == "nie wierzę co się dzieje"
+  
+            if (msg.toLowerCase() == "nie wierzę co się dzieje") {
      message.channel.send("jak kura z głodu pieje")
   } 
   
-      if (msg.toLowerCase() == "nie wierze co sie dzieje"
-     message.channel.send("jak kura z głodu pieje")
+            if (msg.toLowerCase() == "nie wierze co sie dzieje") {
+     message.channel.send("jak kura z głodu pieje [CIĄG DALSZY NASTĄPI JA TEŻ CZŁOWIEK]")
   } 
-  
-      if (msg.toLowerCase() == "jak wilkołak do księżyca"
-     message.channel.send("w głowie dziury ulica")
-  } 
-  
-        if (msg.toLowerCase() == "jak wilkolak do ksiezyca"
-     message.channel.send("w głowie dziury ulica")
-  } 
-  
-        if (msg.toLowerCase() == "przed twoją chatą"
-     message.channel.send("rozpuszczam się jak baton")
-  } 
-  
-       if (msg.toLowerCase() == "przed twoja chata"
-     message.channel.send("rozpuszczam się jak baton")
-  } 
-  
-       if (msg.toLowerCase() == "który leży na blacie"
-     message.channel.send("zejście jest jak nie wciągacie")
-  } 
-  
-         if (msg.toLowerCase() == "ktory lezy na blacie"
-     message.channel.send("zejście jest jak nie wciągacie (SOONTM dalsza piosenka nie chce mi się robić narazie ja tez czlowiek ok)")
-  } 
-  
-  
-    if(msg == "<@768193728690126889>") {
-    message.channel.send("No ale prefixu zapomniałeś? Trzymaj tu: s!")
-  }
   
   if(msg == "nie ruszam dupy z klopa") {
     message.channel.send("ta zupa była z mlekiem")
