@@ -52,6 +52,11 @@ bot.on("message", (message) => {
       message.react('🥣');
     }
     
+      else if (cmd == "tylkojednowgłowiemam") {
+      message.channel.send("koksu 5 gram");
+      message.react('🌿');
+    }
+    
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
@@ -70,7 +75,7 @@ bot.on("message", (message) => {
     }
     
     else if (cmd == "propozycja_anonim") {  
-      const args = message.content.slice(12).trim().split(/ +/g);
+      const args = message.content.slice(19).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
 
       message.delete();
