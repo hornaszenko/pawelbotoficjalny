@@ -19,7 +19,30 @@ bot.on("message", (message) => {
     message.react('😂');
     message.react('😹');
   }
-
+  
+    if (msg.toLowerCase() == "odlecieć sam") {
+     message.channel.send("w kraine zapomnienia")
+  }
+  
+      if (msg.toLowerCase() == "odleciec sam") {
+     message.channel.send("w kraine zapomnienia")
+  }
+  
+      if (msg.toLowerCase() == "w głowie myśli mam") {
+     message.channel.send("kiedy skończy się ten stan")
+  }
+  
+       if (msg.toLowerCase() == "w glowie mysli mam") {
+     message.channel.send("kiedy skończy się ten stan")
+  }
+       if (msg.toLowerCase() == "gdy już nie będę sam") {
+     message.channel.send("bo wjedzie biały węgorz (ciąg dalszy nastąpi)")
+  } 
+  
+        if (msg.toLowerCase() == "gdy juz nie bede sam") {
+     message.channel.send("bo wjedzie biały węgorz (ciąg dalszy nastąpi)")
+  } 
+  
   if(msg == "<@768193728690126889>") {
     message.channel.send("No ale prefixu zapomniałeś? Trzymaj tu: s!")
   }
@@ -43,7 +66,7 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setDescription("**Pomoc**")
       embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim");
-      embed.addField("Komendy 4FUN", "s!zupa");
+      embed.addField("Komendy 4FUN", "s!zupa, s!tylkojednowglowiemam");
       message.channel.send(embed)
     }
 
