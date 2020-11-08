@@ -42,7 +42,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**Pomoc**")
-      embed.addField("Komendy do głosowania", "s!propozycja");
+      embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim");
       embed.addField("Komendy 4FUN", "s!zupa");
       message.channel.send(embed)
     }
@@ -68,6 +68,23 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     }
+    
+    else if (cmd == "propozycja_anonim") {  
+      const args = message.content.slice(12).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+
+      message.delete();
+
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji chce pozostać anonimowy.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🟩");
+        embedMessage.react("🟨");
+        embedMessage.react("🟥");
+      });
+    } 
 
     else {
       return;
