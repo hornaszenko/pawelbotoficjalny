@@ -142,7 +142,7 @@ bot.on("message", (message) => {
      message.channel.send("będzie trwał ten stan")
   } 
   
-          if (msg.toLowerCase() == "snił mi się koksu van") {
+          if (msg.toLowerCase() == "śnił mi się koksu van") {
      message.channel.send("i hery gram tak dla smaku")
   } 
   
