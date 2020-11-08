@@ -110,7 +110,7 @@ bot.on("message", (message) => {
            if (msg.toLowerCase() == "chemia party") {
      message.channel.send("chce na narty")
   } 
-           if (msg.toLowerCase() == "do dilera nie na alpy") {
+           if (msg.toLowerCase() == "do dilera a nie w alpy") {
      message.channel.send("o żesz kurwa chyba fiknę")
   } 
   
