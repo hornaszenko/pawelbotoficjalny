@@ -64,7 +64,90 @@ bot.on("message", (message) => {
   } 
   
             if (msg.toLowerCase() == "nie wierze co sie dzieje") {
-     message.channel.send("jak kura z głodu pieje [CIĄG DALSZY NASTĄPI JA TEŻ CZŁOWIEK]")
+     message.channel.send("jak kura z głodu pieje")
+  } 
+ 
+            if (msg.toLowerCase() == "jak wilkołak do księżyca") {
+     message.channel.send("w głowie dziury jak ulica")
+  } 
+  
+            if (msg.toLowerCase() == "jak wilkolak do ksiezyca") {
+     message.channel.send("w głowie dziury jak ulica (od teraz pisz tylko z polskimi znakami, nie chce mi sie juz dorabiac dwoch wersji)")
+  } 
+           if (msg.toLowerCase() == "przed twoją chatą") {
+     message.channel.send("rozpuszczam się jak baton")
+  } 
+           if (msg.toLowerCase() == "który leży na blacie") {
+     message.channel.send("zejście jest jak nie wciągacie")
+  } 
+           if (msg.toLowerCase() == "bracie kurwa ryj mi krzywi") {
+     message.channel.send("w głowie burdel jak w tv")
+  } 
+           if (msg.toLowerCase() == "mnie nie dziwi taki stan") {
+     message.channel.send("brak towaru w myślach ćpam")
+  } 
+  
+           if (msg.toLowerCase() == "radę dam albo nie dam") {
+     message.channel.send("wszystko kurwa z chaty sprzedam")
+  } 
+  
+           if (msg.toLowerCase() == "w sumie mam już przejebane") {
+     message.channel.send("lecz już wszystko jest sprzedane")
+  } 
+  
+           if (msg.toLowerCase() == "ja pierdole same długi") {
+     message.channel.send("kinol jak u tabalugi")
+  } 
+  
+           if (msg.toLowerCase() == "dzień drugi bez walenia") {
+     message.channel.send("gdzie jest wąż? biała chemia")
+  } 
+  
+           if (msg.toLowerCase() == "jebane zejście tak wykańcza") {
+     message.channel.send("jakby w chuja dziabła cię szarańcza")
+  } 
+  
+           if (msg.toLowerCase() == "chemia party") {
+     message.channel.send("chce na narty")
+  } 
+           if (msg.toLowerCase() == "do dilera nie na alpy") {
+     message.channel.send("o żesz kurwa chyba fiknę")
+  } 
+  
+           if (msg.toLowerCase() == "jak w nochala nic nie psiknę") {
+     message.channel.send("tak bardzo chcę dotykać gwiazd")
+  } 
+  
+           if (msg.toLowerCase() == "ale nic z tego bo mam zjazd") {
+     message.channel.send("totalne kurwa mega zejście")
+  }
+  
+           if (msg.toLowerCase() == "a marzy mi się smoka wejście") {
+     message.channel.send("masz hajsy? ci też zalegam?")
+  } 
+  
+           if (msg.toLowerCase() == "no to chuj dziś już nie biegam") {
+     message.channel.send("chce mieć kopa jak pantera")
+  } 
+  
+          if (msg.toLowerCase() == "w krechę nie ma u dilera") {
+     message.channel.send("już nie na pewno nie")
+  } 
+  
+          if (msg.toLowerCase() == "chyba śmierć rozkłada mnie") {
+     message.channel.send("nic już nie przełknę mam dreszcze")
+  } 
+  
+          if (msg.toLowerCase() == "kurwa mać ile jeszcze?") {
+     message.channel.send("będzie trwał ten stan")
+  } 
+  
+          if (msg.toLowerCase() == "snił mi się koksu van") {
+     message.channel.send("i hery gram tak dla smaku")
+  } 
+  
+    if (msg.toLowerCase() == "chcę się wozić w cadillacu") {
+     message.channel.send("myślami po znajomych biegam [CIĄG DALSZY PÓŹNIEJ]")
   } 
   
   if(msg == "nie ruszam dupy z klopa") {
