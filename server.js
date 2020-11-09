@@ -180,8 +180,9 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**Pomoc**")
-      embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim, s!ankieta");
+      embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim, s!ankieta, s!komentarz");
       embed.addField("Komendy 4FUN", "s!zupa, s!tylkojednowglowiemam");
+      embed.addField("Inne", "s!koronawirusnowezarażenia");
       embed.setFooter("Możesz wpisać również s!help_<dana komenda bota>.");
       message.channel.send(embed)
     }
@@ -235,6 +236,18 @@ bot.on("message", (message) => {
       message.channel.send("koksu pięć gram");
       message.react('🌿');
     }
+   
+    
+    else if (cmd == "koronawirusnowezarażenia") {  
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("Dobowo podtwierdzono 21 713 nowych przypadków zakażenia koronawirusem z województw: śląskiego (4373), małopolskiego (2650), wielkopolskiego (1983), dolnośląskiego (1719), mazowieckiego (1630), łódzkiego (1269), podkarpackiego (1260), lubelskiego (1201), pomorskiego (1122), kujawsko-pomorskiego (1018), zachodniopomorskiego (819), warmińsko-mazurskiego (694), opolskiego (591), lubuskiego (543), podlaskiego (497), świętokrzyskiego (344). Z powodu COVID-19 zmarło 45 osób, natomiast z powodu współistnienia COVID-19 z innymi schorzeniami zmarło 128 osób.")
+      embed.setFooter(`Źródła z Twittera Ministerstwa Zdrowia.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🦠");
+      });
+    }
+    
     
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
@@ -250,6 +263,19 @@ bot.on("message", (message) => {
         embedMessage.react("🟩");
         embedMessage.react("🟨");
         embedMessage.react("🟥");
+      });
+    }
+    
+     else if (cmd == "komentarz") {  
+      const args = message.content.slice(11).trim().split(/ +/g);
+      let say = args.slice(0).join(" ");
+
+      message.delete();
+
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(say)
+      embed.setFooter(`Napisane przez: ${message.author.tag}.`)
       });
     }
     
