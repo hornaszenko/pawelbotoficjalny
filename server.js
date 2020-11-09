@@ -200,6 +200,23 @@ bot.on("message", (message) => {
       });
     }
     
+        else if (cmd == "ankieta") {  
+      const args = message.content.slice(9).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+
+      message.delete();
+
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+      });
+    }
+    
+    
     else if (cmd == "propozycja_anonim") {  
       const args = message.content.slice(19).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
