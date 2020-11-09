@@ -180,7 +180,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**Pomoc**")
-      embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim, s!ankieta, s!komentarz");
+      embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim, s!ankieta");
       embed.addField("Komendy 4FUN", "s!zupa, s!tylkojednowglowiemam");
       embed.addField("Inne", "s!koronawirusnowezarażenia");
       embed.setFooter("Możesz wpisać również s!help_<dana komenda bota>.");
@@ -265,19 +265,7 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     }
-    
-     else if (cmd == "komentarz") {  
-      const args = message.content.slice(11).trim().split(/ +/g);
-      let say = args.slice(0).join(" ");
-
-      message.delete();
-
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(say)
-      embed.setFooter(`Napisane przez: ${message.author.tag}.`)
-      });
-    }
+   
     
         else if (cmd == "ankieta") {  
       const args = message.content.slice(9).trim().split(/ +/g);
