@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 client.on("ready", () =>{
-    console.log(`Bot started.`);
+    console.log(`Logged in as ${client.user.tag}!`);
     client.user.setPresence({
         status: "online",  // You can show online, idle... Do not disturb is dnd
         game: {
-            name: "Wpisz s!help po komendy.",  // The message shown
+            name: "Wpisz s!help",  // The message shown
             type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
         }
     });
