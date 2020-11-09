@@ -182,11 +182,11 @@ bot.on("message", (message) => {
       embed.setDescription("**Pomoc**")
       embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim, s!ankieta");
       embed.addField("Komendy 4FUN", "s!zupa, s!tylkojednowglowiemam");
-      embed.setFooter("Możesz wpisać również s!help <dana komenda bota>.");
+      embed.setFooter("Możesz wpisać również s!help_<dana komenda bota>.");
       message.channel.send(embed)
     }
     
-        if (cmd == "help propozycja") {
+        if (cmd == "help_propozycja") {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**s!propozycja**")
@@ -200,7 +200,7 @@ bot.on("message", (message) => {
     }
     
       else if (cmd == "tylkojednowgłowiemam") {
-      message.channel.send("koksu 5 gram");
+      message.channel.send("koksu pięć gram");
       message.react('🌿');
     }
     
