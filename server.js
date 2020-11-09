@@ -179,7 +179,7 @@ bot.on("message", (message) => {
     if (cmd == "help") {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
-      embed.setDescription("**Pomoc**")
+      embed.setDescription("**Pomoc - bot.user.tag**")
       embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim, s!ankieta");
       embed.addField("Komendy 4FUN", "s!zupa, s!tylkojednowglowiemam");
       message.channel.send(embed)
