@@ -190,10 +190,41 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**s!propozycja**")
-      embed.addField("W jakich momentach warto używać komendy s!propozycja i do czego ona służy?", "Jeśli chcesz zaproponować jakąś ciekawą rzecz, po prostu (najlepiej jeśli jest do tego wyznaczony kanał) wystarczy napisać swoją propozycję, najlepiej używać komendy w momentach gdy twoja propozycja brzmi np. Dodać kanał #słodkie-zwierzątka.");
+      embed.addField("Na czym ta komenda polega?", "Jeśli chcesz zaproponować jakąś ciekawą rzecz, po prostu (najlepiej jeśli jest do tego wyznaczony kanał) wystarczy napisać swoją propozycję, najlepiej używać komendy w momentach gdy twoja propozycja brzmi np. Dodać kanał #słodkie-zwierzątka.");
+      message.channel.send(embed)
+    }
+    
+           if (cmd == "help_propozycja_anonim") {
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("**s!propozycja_anonim**")
+      embed.addField ("Na czym ta komenda polega?", "To samo co s!propozycja (jeśli nie wiesz na czym to polega odsyłamy do s!help_propozycja),  tyle że na dole zamiast twojego tagu, pojawia się napis że propozycja jest od anonimowej osoby.");
       message.channel.send(embed)
     }
 
+      if (cmd == "help_tylkojednowgłowiemam") {
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("**s!tylkojednowgłowiemam**")
+      embed.addField ("Na czym ta komenda polega?", "Możesz pośpiewać sobie z botem piosenkę Cypisa pt. Gdzie jest biały węgorz?, znaną też większości jako Tańcząca Polska Krowa, komenda nie jest dokończona (połowa piosenki), ale dodajemy coraz więcej tekstu!");
+      message.channel.send(embed)
+    }
+    
+    if (cmd == "help_zupa") {
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("**s!zupa**")
+      embed.addField ("Na czym ta komenda polega?", "Możesz pośpiewać sobie z botem przeróbkę piosenki Basshunter - Dota, czyli Po twojej pysznej zupie, która jest no już powiedzmy to sobie ***kultowa***.");
+      message.channel.send(embed)
+      
+      
+      if (cmd =="help_ankieta") {
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("**s!ankieta**")
+      embed.addField ("Na czym ta komenda polega?", "Jest ona bardzo podobna do komendy s!propozycja, jednak dotyczy ankiet takich jak np. Jaką małpa lepsza? :a: Nosacz :b: Goryl.");
+      message.channel.send(embed)
+        
     else if (cmd == "zupa") {
       message.channel.send("po twojej pysznej zupie");
       message.react('🥣');
