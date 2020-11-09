@@ -107,47 +107,59 @@ bot.on("message", (message) => {
      message.channel.send("jakby w chuja dziabła cię szarańcza")
   } 
   
-           if (msg.toLowerCase() == "chemia party") {
-     message.channel.send("chce na narty")
+           if (msg.toLowerCase() == "chemia party chcę na narty") {
+     message.channel.send("do dilera nie na alpy")
   } 
-           if (msg.toLowerCase() == "do dilera a nie w alpy") {
-     message.channel.send("o żesz kurwa chyba fiknę")
-  } 
-  
-           if (msg.toLowerCase() == "jak w nochala nic nie psiknę") {
-     message.channel.send("tak bardzo chcę dotykać gwiazd")
+           if (msg.toLowerCase() == "o żesz kurwa chyba fiknę") {
+     message.channel.send("jak w nochala nic nie psiknę")
   } 
   
-           if (msg.toLowerCase() == "ale nic z tego bo mam zjazd") {
-     message.channel.send("totalne kurwa mega zejście")
+           if (msg.toLowerCase() == "tak bardzo chcę dotykać gwiazd") {
+     message.channel.send("ale nic z tego bo mam zjazd")
+  } 
+  
+           if (msg.toLowerCase() == "totalne kurwa mega zejśćie") {
+     message.channel.send("a marzy mi się smoka wejście")
   }
   
-           if (msg.toLowerCase() == "a marzy mi się smoka wejście") {
-     message.channel.send("masz hajsy? ci też zalegam?")
+           if (msg.toLowerCase() == "masz hajsy? ci też zalegam?") {
+     message.channel.send("no to chuj dziś już nie biegam")
   } 
   
-           if (msg.toLowerCase() == "no to chuj dziś już nie biegam") {
-     message.channel.send("chce mieć kopa jak pantera")
+           if (msg.toLowerCase() == "chce mieć kopa jak pantera") {
+     message.channel.send("w krechę nie ma u dilera")
   } 
   
-          if (msg.toLowerCase() == "w krechę nie ma u dilera") {
-     message.channel.send("już nie na pewno nie")
+          if (msg.toLowerCase() == "już nie na pewno nie") {
+     message.channel.send("chyba śmierć rozkłada mnie")
   } 
   
-          if (msg.toLowerCase() == "chyba śmierć rozkłada mnie") {
-     message.channel.send("nic już nie przełknę mam dreszcze")
+          if (msg.toLowerCase() == "nie już nie przełknę mam dreszcze") {
+     message.channel.send("kurwa mać ile jeszcze?")
   } 
   
-          if (msg.toLowerCase() == "kurwa mać ile jeszcze?") {
-     message.channel.send("będzie trwał ten stan")
+          if (msg.toLowerCase() == "będzie trwał ten stan") {
+     message.channel.send("śnił mi się koksu van")
   } 
   
-          if (msg.toLowerCase() == "śnił mi się koksu van") {
-     message.channel.send("i hery gram tak dla smaku")
+          if (msg.toLowerCase() == "i hery gram tak dla smaku") {
+     message.channel.send("chcę się wozić w cadillacu")
   } 
   
-    if (msg.toLowerCase() == "chcę się wozić w cadillacu") {
-     message.channel.send("myślami po znajomych biegam [CIĄG DALSZY PÓŹNIEJ]")
+    if (msg.toLowerCase() == "myślami po znajomych biegam") {
+     message.channel.send("lecz każdemu coś zalegam")
+  } 
+  
+    if (msg.toLowerCase() == "odpada opcja pożyczki") {
+     message.channel.send("bo przycinam jak nożyczki")
+  } 
+  
+     if (msg.toLowerCase() == "odpada opcja pożyczki") {
+     message.channel.send("bo przycinam jak nożyczki")
+  } 
+  
+     if (msg.toLowerCase() == "syf jak na discovery") {
+     message.channel.send("chcę wystrzelić jak z giwery [CIĄG DALSZY NASTĄPI]")
   } 
   
   if(msg == "nie ruszam dupy z klopa") {
