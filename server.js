@@ -1,16 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-client.on("ready", () =>{
-    console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setPresence({
-        status: "online",  // You can show online, idle... Do not disturb is dnd
-        game: {
-            name: "Wpisz s!help",  // The message shown
-            type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
-        }
-    });
- });
+bot.on("ready", () => {
+  console.log(bot.user.tag + " is ready!");
+});
 
 bot.on("message", (message) => {
   let msg = message.content;
