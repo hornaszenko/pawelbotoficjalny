@@ -216,7 +216,7 @@ bot.on("message", (message) => {
       embed.setDescription("**s!zupa**")
       embed.addField ("Na czym ta komenda polega?", "Możesz pośpiewać sobie z botem przeróbkę piosenki Basshunter - Dota, czyli Po twojej pysznej zupie, która jest no już powiedzmy to sobie ***kultowa***.");
       message.channel.send(embed)
-      
+    }
       
       if (cmd =="help_ankieta") {
       let embed = new Discord.MessageEmbed()
@@ -224,7 +224,8 @@ bot.on("message", (message) => {
       embed.setDescription("**s!ankieta**")
       embed.addField ("Na czym ta komenda polega?", "Jest ona bardzo podobna do komendy s!propozycja, jednak dotyczy ankiet takich jak np. Jaką małpa lepsza? :a: Nosacz :b: Goryl.");
       message.channel.send(embed)
-        
+      }
+    
     else if (cmd == "zupa") {
       message.channel.send("po twojej pysznej zupie");
       message.react('🥣');
