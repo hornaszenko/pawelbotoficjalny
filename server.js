@@ -182,6 +182,15 @@ bot.on("message", (message) => {
       embed.setDescription("**Pomoc**")
       embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim, s!ankieta");
       embed.addField("Komendy 4FUN", "s!zupa, s!tylkojednowglowiemam");
+      embed.setFooter("Możesz wpisać również s!help <dana komenda bota>.");
+      message.channel.send(embed)
+    }
+    
+        if (cmd == "help propozycja") {
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("**s!propozycja**")
+      embed.addField("W jakich momentach warto używać komendy s!propozycja i do czego ona służy?", "Jeśli chcesz zaproponować jakąś ciekawą rzecz, po prostu (najlepiej jeśli jest do tego wyznaczony kanał) wystarczy napisać swoją propozycję, najlepiej używać komendy w momentach gdy twoja propozycja brzmi np. Dodać kanał #słodkie-zwierzątka.");
       message.channel.send(embed)
     }
 
