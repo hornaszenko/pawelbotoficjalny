@@ -265,6 +265,20 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     }
+    
+        else if (cmd == "komentarz") {  
+      const args = message.content.slice(12).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+
+      message.delete();
+
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("${message.author.tag} napisał" + suggestion)
+      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji: ${message.author.tag}.`)
+      message.channel.send(embed)
+    }
+    
    
     
         else if (cmd == "ankieta") {  
