@@ -266,18 +266,11 @@ bot.on("message", (message) => {
       });
     }
     
-        else if (cmd == "komentarz") {  
-      const args = message.content.slice(12).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
+      let args = message.content.substring(PREFIX.length).split(" "); // args = ['say', 'Hello', 'World']
 
-      message.delete();
+      bot.commands.get("komentarz").execute(message, args); // Passing in the entire args array
 
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`Osoba komentująca: ${message.author.tag}.`)
-      message.channel.send(embed)
-    }
+      const sayMessage = args.join(" "); // sayMessage = 'say Hello World'
     
    
     
@@ -314,7 +307,7 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
-
+   
     else {
       return;
     }  
