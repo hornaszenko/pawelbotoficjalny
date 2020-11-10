@@ -274,8 +274,8 @@ bot.on("message", (message) => {
 
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
-      embed.setDescription("${message.author.tag} napisał" + suggestion)
-      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji: ${message.author.tag}.`)
+      embed.setDescription(suggestion)
+      embed.setFooter(`Osoba komentująca: ${message.author.tag}.`)
       message.channel.send(embed)
     }
     
