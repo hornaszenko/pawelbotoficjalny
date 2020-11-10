@@ -272,22 +272,6 @@ bot.on("message", (message) => {
     message.channel.send(sayMessage + ' - ' + message.author)
   };
 
-  exports.conf = {
-    enabled: true,
-    guildOnly: false,
-    aliases: [],
-    permLevel: "User"
-  };
-
-  exports.help = {
-    name: "komentarz",
-    category: "Miscelaneous",
-    description: "say command",
-    usage: "komentarz"
-  };```
-
-    
-   
     
         else if (cmd == "ankieta") {  
       const args = message.content.slice(9).trim().split(/ +/g);
