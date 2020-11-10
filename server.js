@@ -175,7 +175,8 @@ bot.on("message", (message) => {
     let args = str.split(' ');
     let cmd = args[0];
     args.splice(0, 2);
-
+  }
+  
     if (cmd == "help") {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
@@ -265,13 +266,6 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     }
-    
-     exports.run = async (client, message, args) => { 
-    const sayMessage = args.join(" ");
-    message.delete();
-    message.channel.send(sayMessage + ' - ' + message.author)
-  };
-
     
         else if (cmd == "ankieta") {  
       const args = message.content.slice(9).trim().split(/ +/g);
