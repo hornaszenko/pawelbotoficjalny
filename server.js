@@ -241,7 +241,7 @@ bot.on("message", (message) => {
     else if (cmd == "koronawirusnowezarażenia") {  
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
-      embed.setDescription("Dobowo podtwierdzono 21 713 nowych przypadków zakażenia koronawirusem z województw: śląskiego (4373), małopolskiego (2650), wielkopolskiego (1983), dolnośląskiego (1719), mazowieckiego (1630), łódzkiego (1269), podkarpackiego (1260), lubelskiego (1201), pomorskiego (1122), kujawsko-pomorskiego (1018), zachodniopomorskiego (819), warmińsko-mazurskiego (694), opolskiego (591), lubuskiego (543), podlaskiego (497), świętokrzyskiego (344). Z powodu COVID-19 zmarło 45 osób, natomiast z powodu współistnienia COVID-19 z innymi schorzeniami zmarło 128 osób.")
+      embed.setDescription("Dobowo potwierdzono 25 484 przypadków zakażenia koronawirusem z województw: śląskiego (4276), wielkopolskiego (3846), małopolskiego (2697), mazowieckiego (1982), dolnośląskiego (2541), łódzkiego (1431), podkarpackiego (1236), pomorskiego (1116), kujawsko-pomorskiego (1108), lubelskiego (985), opolskiego (762), zachodniopomorskiego (738), świętokrzyskiego (753), podlaskiego (714), lubuskiego (650), warmińsko-mazurskiego (649). Z powodu COVID-19 zmarło 61 osób, natomiast z powodu współistnienia COVID-19 z innymi schorzeniami zmarło 269 osób.")
       embed.setFooter(`Źródła z Twittera Ministerstwa Zdrowia.`)
       message.channel.send(embed).then(embedMessage => {
         embedMessage.react("🦠");
