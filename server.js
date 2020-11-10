@@ -175,7 +175,7 @@ bot.on("message", (message) => {
     let args = str.split(' ');
     let cmd = args[0];
     args.splice(0, 2);
-  }
+ 
   
     if (cmd == "help") {
       let embed = new Discord.MessageEmbed()
