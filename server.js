@@ -266,11 +266,26 @@ bot.on("message", (message) => {
       });
     }
     
-      let args = message.content.substring(PREFIX.length).split(" "); // args = ['say', 'Hello', 'World']
+     exports.run = async (client, message, args) => { 
+    const sayMessage = args.join(" ");
+    message.delete();
+    message.channel.send(sayMessage + ' - ' + message.author)
+  };
 
-      bot.commands.get("komentarz").execute(message, args); // Passing in the entire args array
+  exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: "User"
+  };
 
-      const sayMessage = args.join(" "); // sayMessage = 'say Hello World'
+  exports.help = {
+    name: "komentarz",
+    category: "Miscelaneous",
+    description: "say command",
+    usage: "komentarz"
+  };```
+
     
    
     
