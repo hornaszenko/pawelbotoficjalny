@@ -171,35 +171,13 @@ bot.on("message", (message) => {
   }
   
 
-client.on("message", async message => {
-
-    if(message.author.bot) return;
-    if(message.channel.type === 'dm') return;
-
-    let prefix = await db.get(`prefix_${message.guild.id}`);
-    if(prefix === null) prefix = s!;
-
-    if(message.content.startsWith(prefix)) {
-        const args = message.content.slice(prefix.length).trim().split(/ +/g);
-
-        const command = args.shift().toLowerCase();
-
-        if(!client.commands.has(command)) return;
-
-
-        try {
-            client.commands.get(command).run(client, message, args);
-
-        } catch (error){
-            console.error(error);
-        }
-    }
-})
-
-client.login(token);
+ if (msg.substring(0, 2)=="s!"){
+    let str = msg.substring(2, msg.length);
+    let args = str.split(' ');
+    let cmd = args[0];
+    args.splice(0, 2);
   
  
-  
     if (cmd == "help") {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
