@@ -170,6 +170,11 @@ bot.on("message", (message) => {
      message.channel.send("po twojej pysznej zupie")
   }
   
+    if (msg.toLowerCase() == "na mleko mam alergię") {
+     message.channel.send("po twojej pysznej zupie")
+  }
+  
+  
  if (msg.substring(0, 2)=="s!"){
     let str = msg.substring(2, msg.length);
     let args = str.split(' ');
