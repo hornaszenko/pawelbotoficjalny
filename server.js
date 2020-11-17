@@ -180,6 +180,9 @@ bot.on("message", (message) => {
      message.channel.send("po twojej pysznej zupie")
   }
   
+      if (msg.toLowerCase() == "żabsą") {
+     message.channel.send("to ziomal")
+  }
   
  if (msg.substring(0, 2)=="s!"){
     let str = msg.substring(2, msg.length);
