@@ -14,6 +14,10 @@ bot.on("message", (message) => {
     message.react('👋');
   }
   
+    if(msg == "<@768193728690126889>") {
+    message.channel.send("witam witam mój prefix to s!");
+  }
+  
 
 
   if (msg.toLowerCase() == "penis") {
