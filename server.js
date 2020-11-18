@@ -322,4 +322,4 @@ bot.on("message", (message) => {
 });
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 
-bot.login("NzY4MTkzNzI4NjkwMTI2ODg5.X486KQ.8Z0rAPMyEuZfZlakUDmn9RxoQww");
+bot.login("NzY4MTkzNzI4NjkwMTI2ODg5.X486KQ.UpuFKklag9t1kjHt1YyiMmYLzWc");
