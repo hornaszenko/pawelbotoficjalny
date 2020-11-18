@@ -197,7 +197,7 @@ bot.on("message", (message) => {
       embed.setDescription("**Pomoc**")
       embed.addField("Komendy do głosowania", "s!propozycja, s!propozycja_anonim, s!ankieta");
       embed.addField("Komendy 4FUN", "s!zupa, s!tylkojednowglowiemam");
-      embed.addField("Inne", "s!koronawirusnowezarażenia");
+      embed.addField("Poziomy", "s!poziom, s!wiadomości");
       embed.setFooter("Możesz wpisać również s!help_<dana komenda bota>.");
       message.channel.send(embed)
     }
@@ -251,19 +251,7 @@ bot.on("message", (message) => {
       message.channel.send("koksu pięć gram");
       message.react('🌿');
     }
-   
-    
-    else if (cmd == "koronawirusnowezarażenia") {  
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription("Mamy 25 221 nowych i potwierdzonych przypadków zakażenia #koronawirus z województw: śląskiego (4066), wielkopolskiego (3081), małopolskiego (2947), dolnośląskiego (2661), mazowieckiego (1976), lubelskiego (1449), łódzkiego (1443), pomorskiego (1321), podkarpackiego (1152), opolskiego (910), zachodniopomorskiego (852), kujawsko-pomorskiego (792), lubuskiego (791), podlaskiego (662), warmińsko-mazurskiego (618), świętokrzyskiego (500). Z powodu COVID-19 zmarło 75 osób, natomiast z powodu współistnienia COVID-19 z innymi schorzeniami zmarło 355 osób.")
-      embed.setFooter(`Źródło z Twittera Ministerstwa Zdrowia.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🦠");
-      });
-    }
-    
-    
+       
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
