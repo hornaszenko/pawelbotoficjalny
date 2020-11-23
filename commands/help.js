@@ -6,10 +6,10 @@ bot.on("ready", () => {
 });
   
  if (msg.substring(0, 2)=="now:"){
-    let str = msg.substring(2, msg.length);
+    let str = msg.substring(4, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
-    args.splice(0, 2);
+    args.splice(0, 4);
   
  
     if (cmd == "help") {
