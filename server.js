@@ -31,7 +31,6 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**KOMENDA NIEAKTYWNA**")
-      embed.addField("Komenda nieaktywna,");
       embed.addField("Nowa komenda", "now:help");
       message.channel.send(embed)
     }
