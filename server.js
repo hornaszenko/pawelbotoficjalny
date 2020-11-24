@@ -9,7 +9,7 @@ bot.on("message", (message) => {
   let msg = message.content;
   if (message.author.bot) return;
 
-  if(msg == "witam") {
+  if(msg.toLowerCase() == "witam") {
     message.channel.send("wilkommen")
     message.react('👋');
   }
