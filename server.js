@@ -13,6 +13,14 @@ bot.on("message", (message) => {
     message.channel.send("wilkommen")
     message.react('👋');
   }
+  
+  if (msg == "s!help") {
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription("**KOMENDA NIEAKTYWNA**")
+      embed.addField("Nowa komenda", "!!help");
+      message.channel.send(embed)
+    }
 
   if (msg.toLowerCase() == "penis") {
     message.react('🤣');
@@ -20,18 +28,17 @@ bot.on("message", (message) => {
     message.react('😹');
   }
   
- if (msg.substring(0, 2)=="s!"){
+ if (msg.substring(0, 2)=="!!"){
     let str = msg.substring(2, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
     args.splice(0, 2);
   
  
-    if (cmd == "help") {
+    if (cmd == "pomoc") {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
-      embed.setDescription("**KOMENDA NIEAKTYWNA**")
-      embed.addField("Nowa komenda", "now:help");
+      embed.setDescription("**Wkrótce! :eyes:**")
       message.channel.send(embed)
     }
    
