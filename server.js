@@ -18,7 +18,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setDescription("**KOMENDA NIEAKTYWNA**")
-      embed.addField("Nowa komenda", "!!help");
+      embed.addField("Nowa komenda", "--pomoc");
       message.channel.send(embed)
     }
 
@@ -28,7 +28,7 @@ bot.on("message", (message) => {
     message.react('😹');
   }
   
- if (msg.substring(0, 2)=="!!"){
+ if (msg.substring(0, 2)=="--"){
     let str = msg.substring(2, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
