@@ -9,11 +9,6 @@ bot.on("message", (message) => {
   let msg = message.content;
   if (message.author.bot) return;
 
-  if(msg.toLowerCase() == "witam") {
-    message.channel.send("wilkommen")
-    message.react('👋');
-  }
-
   
   if(msg.toLowerCase() == "jestem lewakiem") {
     message.channel.send("o ty")
@@ -27,10 +22,10 @@ bot.on("message", (message) => {
   }
   
  if (msg.substring(0, 2)=="b8b!"){
-    let str = msg.substring(2, msg.length);
+    let str = msg.substring(4, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
-    args.splice(0, 2);
+    args.splice(0, 4);
   
  
     if (cmd == "pomoc") {
@@ -47,4 +42,4 @@ bot.on("message", (message) => {
 });
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 
-bot.login("NzY4MTkzNzI4NjkwMTI2ODg5.X486KQ.UpuFKklag9t1kjHt1YyiMmYLzWc");
+bot.login("Nzg5NDE3MzcxODA5ODczOTQw.X9xwOA.M05YZ-0PCKsphHd-a-xHQ6eKV6Q");
