@@ -48,7 +48,7 @@ bot.on("message", (message) => {
      const rando_imgs =
 'https://pbs.twimg.com/media/Eh3X0CsXkAEnQC5?format=jpg&name=900x900',
 'https://pbs.twimg.com/media/DrhRXdRXcAExNZQ?format=jpg&name=large'
-'',
+'https://media.discordapp.net/attachments/790142899664453662/790143741616586772/unknown.png',
 ] 
  file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
 });     
