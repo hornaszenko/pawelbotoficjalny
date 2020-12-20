@@ -21,6 +21,7 @@ bot.on("message", (message) => {
     message.react('😹');
   }
   
+  
  if (msg.substring(0, 2)=="b8b!"){
     let str = msg.substring(4, msg.length);
     let args = str.split(' ');
@@ -35,11 +36,6 @@ bot.on("message", (message) => {
       message.channel.send(embed)
     }
    
-    else {
-      return;
-    }  
-  }       
-});
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 
 bot.login("Nzg5NDE3MzcxODA5ODczOTQw.X9xwOA.M05YZ-0PCKsphHd-a-xHQ6eKV6Q");
