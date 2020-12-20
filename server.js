@@ -21,6 +21,9 @@ bot.on("message", (message) => {
     message.react('😹');
   }
   
+  if (msg) == "polaka") {
+    message.channel.send("Polaka z dużej litery!")
+  
   
  if (msg.substring(0, 2)=="b!"){
     let str = msg.substring(2, msg.length);
@@ -32,10 +35,24 @@ bot.on("message", (message) => {
     if (cmd == "pomoc") {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
-      embed.setDescription("**Wkrótce! :eyes:**")
+      embed.setDescription("**8BALL**")
+      embed.addField("b!8ball")
+      embed.setDescription("**PROPOZYCJE ITP.**")
+      embed.addField("b!ankieta")
+      embed.addField("b!propozycja")
+      embed.addField("b!propozycja_anonim")
       message.channel.send(embed)
     }
    
+   if (cmd == "8ball") {
+     const rando_imgs =
+'https://pbs.twimg.com/media/Eh3X0CsXkAEnQC5?format=jpg&name=900x900',
+'https://pbs.twimg.com/media/DrhRXdRXcAExNZQ?format=jpg&name=large'
+'',
+] 
+ file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+});     
+ }
            else if (cmd == "ankieta") {  
       const args = message.content.slice(9).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
