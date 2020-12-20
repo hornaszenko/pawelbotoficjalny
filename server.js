@@ -45,11 +45,12 @@ bot.on("message", (message) => {
     }
    
 var images = ["https://pbs.twimg.com/media/Ehz9SWwXkAU8v9W?format=jpg&name=small", "https://media.discordapp.net/attachments/790142899664453662/790143741616586772/unknown.png", "https://www.wykop.pl/cdn/c3201142/comment_FZBY1nEf6riIisiMBnemv5jaHtNTaMtA,w400.jpg", "https://media.discordapp.net/attachments/790142899664453662/790146921485565973/unknown.png" ];
-var image = Math.floor(Math.random() * images.length);
+const image = images[Math.floor(Math.random() * images.length)];
 
-    else if (cmd == "8ball") {    
-    let random = new Discord.MessageEmbed()
-      .setImage(String([images[image]]))
+if (cmd == "8ball") {    
+    const random = new Discord.MessageEmbed()
+      .setAuthor('Zdjęcia pozyskane z Twittera Krzysztofa Bosaka.')
+      .setImage(image)
 
     message.channel.send(random);
 }
