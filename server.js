@@ -47,12 +47,15 @@ bot.on("message", (message) => {
 
 
    else if (cmd == "8ball") {
+  
+   const messages = [
+    "https://pbs.twimg.com/media/Ehz9SWwXkAU8v9W?format=jpg&name=small", 
+    "https://media.discordapp.net/attachments/790142899664453662/790143741616586772/unknown.png", 
+    "https://www.wykop.pl/cdn/c3201142/comment_FZBY1nEf6riIisiMBnemv5jaHtNTaMtA,w400.jpg", 
+    "https://media.discordapp.net/attachments/790142899664453662/790146921485565973/unknown.png", ];
+     
+const randomMessage = messages[Math.floor(Math.random() * messages.length)];  }
    
-   const messages = ["https://pbs.twimg.com/media/Ehz9SWwXkAU8v9W?format=jpg&name=small", "https://media.discordapp.net/attachments/790142899664453662/790143741616586772/unknown.png", "https://www.wykop.pl/cdn/c3201142/comment_FZBY1nEf6riIisiMBnemv5jaHtNTaMtA,w400.jpg", "https://media.discordapp.net/attachments/790142899664453662/790146921485565973/unknown.png" ];
-   const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-
-   console.log(randomMessage)
-      
    else if (cmd == "ankieta") {  
       const args = message.content.slice(9).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
