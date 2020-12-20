@@ -22,11 +22,11 @@ bot.on("message", (message) => {
   }
   
   
- if (msg.substring(0, 2)=="b8b!"){
-    let str = msg.substring(4, msg.length);
+ if (msg.substring(0, 2)=="b!"){
+    let str = msg.substring(2, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
-    args.splice(0, 4);
+    args.splice(0, 2);
   
  
     if (cmd == "pomoc") {
