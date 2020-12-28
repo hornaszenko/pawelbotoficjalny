@@ -28,47 +28,9 @@ bot.on("message", (message) => {
     if (cmd == "pomoc") {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
-      embed.setDescription("**PROPOZYCJE ITP.**")
-      embed.addField("m!ankieta")
-      embed.addField("m!propozycja")
-      embed.addField("m!propozycja_anonim")
+      embed.setDescription("**WKRÓTCE**")
       message.channel.send(embed)
     }
-
-
-
-    
-
-    else if (cmd == "ankieta") {
-      const args = message.content.slice(9).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🅰️");
-        embedMessage.react("🅱️");
-      });
-    }
-
-
-    else if (cmd == "propozycja_anonim") {
-      const args = message.content.slice(19).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF") 
-      embed.setDescription(suggestion)
-      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji chce pozostać anonimowy.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🟩");
-        embedMessage.react("🟨");
-        embedMessage.react("🟥");
-      });
-    }
-
 
     else {
       return;
