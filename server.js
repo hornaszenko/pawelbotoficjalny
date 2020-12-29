@@ -37,7 +37,8 @@ bot.on("message", (message) => {
       embed.addField("m!ankieta")
       message.channel.send(embed)
     }
-else if (cmd == "legia") {
+
+     if (cmd == "legia") {
 message.channel.send("to stara kurwa")
      }
 
