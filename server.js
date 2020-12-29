@@ -38,10 +38,11 @@ bot.on("message", (message) => {
       message.channel.send(embed)
     }
 
-     if (cmd == "legia") {
+    else if (cmd == "legia") {
 message.channel.send("to stara kurwa")
      }
 
+    
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
@@ -55,8 +56,7 @@ message.channel.send("to stara kurwa")
         embedMessage.react("🟨");
         embedMessage.react("🟥");
       });
- 
-
+    }
     
         else if (cmd == "ankieta") {  
       const args = message.content.slice(9).trim().split(/ +/g);
@@ -70,7 +70,7 @@ message.channel.send("to stara kurwa")
         embedMessage.react("🅰️");
         embedMessage.react("🅱️");
       });
- 
+    }
     
     
     else if (cmd == "propozycja_anonim") {  
@@ -86,11 +86,12 @@ message.channel.send("to stara kurwa")
         embedMessage.react("🟨");
         embedMessage.react("🟥");
       });
-
+    } 
+   
     else {
       return;
-    }
-  }
+    }  
+  }       
 });
 
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
