@@ -16,36 +16,7 @@ bot.on("message", (message) => {
     message.react('😹');
   }
 
-      if (msg == "m!ankieta +1") {  
-      const args = message.content.slice(14).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🅰️");
-        embedMessage.react("🇧");
-        embedMessage.react("🇨");
-      });
-    }
-
-      if (msg == "m!ankieta +2") {  
-      const args = message.content.slice(14).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🅰️");
-        embedMessage.react("🇧");
-        embedMessage.react("🇨");
-        embedMesaage.react("🇩");
-      });
-    }
+      
 
   if (msg.substring(0, 2) == "m!") {
     let str = msg.substring(2, msg.length);
@@ -58,8 +29,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       .setDescription("**POMOC**")
       .addField ("**4FUN**", "m!legia")
-      .addField ("**PROPOZYCJE ITP.**", "m!propozycja, m!propozycja_anonim, m!ankieta (możliwość dodania opcji dodania większej możliwości wyboru max. do +2)")
-      message.channel.send(embed)
+      .addField ("**PROPOZYCJE ITP.**", "m!propozycja, m!propozycja_anonim")
     }
     
     else if (cmd == "legia") {
@@ -81,19 +51,7 @@ bot.on("message", (message) => {
       });
     }
     
-        else if (cmd == "ankieta") {  
-      const args = message.content.slice(9).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🅰️");
-        embedMessage.react("🅱️");
-      });
-    }
+ 
 
 
     
