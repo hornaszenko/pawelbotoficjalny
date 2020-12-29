@@ -55,7 +55,8 @@ message.channel.send("to stara kurwa")
         embedMessage.react("🟨");
         embedMessage.react("🟥");
       });
-    }
+ 
+
     
         else if (cmd == "ankieta") {  
       const args = message.content.slice(9).trim().split(/ +/g);
@@ -69,7 +70,7 @@ message.channel.send("to stara kurwa")
         embedMessage.react("🅰️");
         embedMessage.react("🅱️");
       });
-    }
+ 
     
     
     else if (cmd == "propozycja_anonim") {  
@@ -85,7 +86,6 @@ message.channel.send("to stara kurwa")
         embedMessage.react("🟨");
         embedMessage.react("🟥");
       });
-    } 
 
     else {
       return;
