@@ -30,58 +30,13 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setDescription("**POMOC**")
       embed.addField("**4FUN**")
-      embed.addField("Planujemy tu coś dodać.")
-      embed.addField("**PROPOZYCJE ITP.**)
-      embed.addField("m!propozycja")
-      embed.addField("m!propozycja_anonim")
-      embed.addField("m!ankieta")
+      embed.addField("m!legia")
       message.channel.send(embed)
     }
     
-    else if (cmd == "propozycja") {  
-      const args = message.content.slice(12).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji: ${message.author.tag}.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🟩");
-        embedMessage.react("🟨");
-        embedMessage.react("🟥");
-      });
+    else if (cmd == "legia") {
+       message.channel.send("to stara kurwa")
     }
-    
-        else if (cmd == "ankieta") {  
-      const args = message.content.slice(9).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🅰️");
-        embedMessage.react("🅱️");
-      });
-    }
-    
-    
-    else if (cmd == "propozycja_anonim") {  
-      const args = message.content.slice(19).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji chce pozostać anonimowy.`)
-      message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🟩");
-        embedMessage.react("🟨");
-        embedMessage.react("🟥");
-      });
-    } 
    
     else {
       return;
