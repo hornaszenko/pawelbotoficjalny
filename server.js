@@ -28,14 +28,19 @@ bot.on("message", (message) => {
     if (cmd == "pomoc") {
       let embed = new Discord.MessageEmbed()
       .setDescription("**POMOC**")
+      .addField ("**MODERACJA**", "Pracujemy nad tym! :construction_worker:")
       .addField ("**4FUN**", "m!legia")
-      .addField ("**PROPOZYCJE ITP.**", "m!propozycja, m!propozycja_anonim")
+      .addField ("**PROPOZYCJE**", "m!propozycja, m!propozycja_anonim")
+      .addField ("**INNE**", "m!zaproś")
     }
     
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
-   
+    else if (cmd == "zaproś") {
+       .setDescription("**Widzę że bot się podoba co nie?**")
+       .addField("No to łap zaproszenie!", "https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=351297&scope=bot")
+
         else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
@@ -50,11 +55,6 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     }
-    
- 
-
-
-    
     
     else if (cmd == "propozycja_anonim") {  
       const args = message.content.slice(19).trim().split(/ +/g);
