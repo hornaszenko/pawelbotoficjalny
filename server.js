@@ -30,18 +30,13 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setDescription("**POMOC**")
       embed.addField("**4FUN**")
-      embed.addField("m!legia")
+      embed.addField("Planujemy tu coś dodać.")
       embed.addField("**PROPOZYCJE ITP.**)
       embed.addField("m!propozycja")
       embed.addField("m!propozycja_anonim")
       embed.addField("m!ankieta")
       message.channel.send(embed)
     }
-
-    else if (cmd == "legia") {
-message.channel.send("to stara kurwa")
-     }
-
     
     else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
