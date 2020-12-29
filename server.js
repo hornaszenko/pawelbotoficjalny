@@ -37,6 +37,7 @@ bot.on("message", (message) => {
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
+
     else if (cmd == "zaproś") {
        .setDescription("**Widzę że bot się podoba co nie?**")
        .addField("No to łap zaproszenie!", "https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=351297&scope=bot")
