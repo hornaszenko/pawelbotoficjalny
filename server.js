@@ -2,10 +2,9 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 bot.on("ready", () => {
-  client.user.setActivity("siema", {
-      type: "PLAYING",
-    });
+  console.log(bot.user.tag + " is ready!");
 });
+  
 
 bot.on("message", (message) => {
   let msg = message.content;
