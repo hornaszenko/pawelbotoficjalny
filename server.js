@@ -30,7 +30,7 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setDescription("**POMOC**")
       embed.addField("**4FUN**")
-      embed.addField("m!legia")
+      embed.setDescription("m!legia")
       message.channel.send(embed)
     }
     
