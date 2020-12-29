@@ -31,6 +31,8 @@ bot.on("message", (message) => {
       embed.setDescription("**WKRÓTCE**")
       message.channel.send(embed)
     }
+else if (cmd == "legia") {
+     }
 
     else {
       return;
