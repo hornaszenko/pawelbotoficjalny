@@ -28,7 +28,7 @@ bot.on("message", (message) => {
     if (cmd == "pomoc") {
       let embed = new Discord.MessageEmbed()
       .setDescription("**POMOC**")
-      .addField ("**4FUN**", "m!legia"),
+      .addFields ("**4FUN**", "m!legia")
       message.channel.send(embed)
     }
     
