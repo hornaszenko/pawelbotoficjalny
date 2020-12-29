@@ -21,11 +21,11 @@ bot.on("message", (message) => {
 
      if (msg.toLowerCase() == "m!pomoc") {
       let embed = new Discord.MessageEmbed()
-      .setDescription("**POMOC**");
-      .addField ("**MODERACJA**", "Pracujemy nad tym!");
-      .addField ("**4FUN**", "m!legia");
-      .addField ("**PROPOZYCJE**", "m!propozycja, m!propozycja_anonim");
-      .addField ("**INNE**", "m!zapros");
+      .setDescription("**POMOC**")
+      .addField ("**MODERACJA**", "Pracujemy nad tym!")
+      .addField ("**4FUN**", "m!legia")
+      .addField ("**PROPOZYCJE**", "m!propozycja, m!propozycja_anonim")
+      .addField ("**INNE**", "m!zapros")
     }
 
     
