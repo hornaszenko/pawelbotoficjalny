@@ -35,7 +35,7 @@ bot.on("message", (message) => {
     }
     
     else if (cmd == "legia") {
-       message.channel.send("to stara kurwa")
+       message.channel.send("to stara kurwa");
     }
 
     else if (cmd == "zaproś") {
