@@ -29,7 +29,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       .setDescription("**POMOC**")
       .addField ("**4FUN**", "m!legia")
-      .addField ("**PROPOZYCJE ITP.**", "m!propozycja", "m!propozycja_anonim", "m!ankieta")
+      .addField ("**PROPOZYCJE ITP.**", "m!propozycja", "m!propozycja_anonim", "m!ankieta (możliwość dodania opcji dodania większej możliwości wyboru max. do +2)")
       message.channel.send(embed)
     }
     
@@ -63,6 +63,37 @@ bot.on("message", (message) => {
       message.channel.send(embed).then(embedMessage => {
         embedMessage.react("🅰️");
         embedMessage.react("🅱️");
+      });
+    }
+
+      else if (cmd == "ankieta +1") {  
+      const args = message.content.slice(12).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🇧");
+        embedMessage.react("🇨");
+      });
+    }
+
+    else if (cmd == "ankieta +2") {  
+      const args = message.content.slice(12).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🇧");
+        embedMessage.react("🇨");
+        embedMesaage.react("🇩");
       });
     }
     
