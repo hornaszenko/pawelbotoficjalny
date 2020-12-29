@@ -25,7 +25,7 @@ bot.on("message", (message) => {
     args.splice(0, 2);
 
 
-    else if (cmd == "pomoc") {
+     if (cmd == "pomoc") {
       let embed = new Discord.MessageEmbed()
       .setDescription("**POMOC**")
       .addField ("**MODERACJA**", "Pracujemy nad tym!")
@@ -35,11 +35,11 @@ bot.on("message", (message) => {
     }
     
     else if (cmd == "legia") {
-       message.channel.send("to stara kurwa");
+       message.channel.send("to stara kurwa")
     }
 
     else if (cmd == "zapros") {
-       message.channel.send("https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=351297&scope=bot");
+       message.channel.send("https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=351297&scope=bot")
     }
 
         else if (cmd == "propozycja") {  
