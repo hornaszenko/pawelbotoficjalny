@@ -31,16 +31,15 @@ bot.on("message", (message) => {
       .addField ("**MODERACJA**", "Pracujemy nad tym!")
       .addField ("**4FUN**", "m!legia")
       .addField ("**PROPOZYCJE**", "m!propozycja, m!propozycja_anonim")
-      .addField ("**INNE**", "m!zaproś")
+      .addField ("**INNE**", "m!zapros")
     }
     
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa");
     }
 
-    else if (cmd == "zaproś") {
-       .setDescription("**Widzę że bot się podoba co nie?**");
-       .addField("No to łap zaproszenie!", "https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=351297&scope=bot");
+    else if (cmd == "zapros") {
+       message.channel.send("https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=351297&scope=bot");
     }
 
         else if (cmd == "propozycja") {  
