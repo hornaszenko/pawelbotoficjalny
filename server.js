@@ -29,7 +29,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       .setDescription("**POMOC**")
       .addField ("**4FUN**", "m!legia")
-      .addField ("**PROPOZYCJE ITP.**", "m!propozycja", "m!propozycja_anonim", "m!ankieta (możliwość dodania opcji dodania większej możliwości wyboru max. do +2)")
+      .addField ("**PROPOZYCJE ITP.**", "m!propozycja, m!propozycja_anonim, m!ankieta (możliwość dodania opcji dodania większej możliwości wyboru max. do +2)")
       message.channel.send(embed)
     }
     
