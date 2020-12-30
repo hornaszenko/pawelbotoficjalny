@@ -27,7 +27,7 @@ bot.on("message", (message) => {
     let cmd = args[0];
     args.splice(0, 2);
     
-     if (cmd == "m!pomoc") {
+     if (cmd == "pomoc") {
        let embed = new Discord.MessageEmbed()
       .setDescription("**POMOC**")
       .addField ("**MODERACJA**", "Pracujemy nad tym!")
