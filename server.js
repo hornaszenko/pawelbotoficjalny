@@ -19,22 +19,22 @@ bot.on("message", (message) => {
 
       
 
-     if (msg.toLowerCase() == "m!pomoc") {
-      let embed = new Discord.MessageEmbed()
-      .setDescription("**POMOC**")
-      .addField ("**MODERACJA**", "Pracujemy nad tym!")
-      .addField ("**4FUN**", "m!legia")
-      .addField ("**PROPOZYCJE**", "m!propozycja, m!propozycja_anonim")
-      .addField ("**INNE**", "m!zapros")
-    }
-
+    
     
   if (msg.substring(0, 2) == "m!") {
     let str = msg.substring(2, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
     args.splice(0, 2);
-
+    
+     if (cmd == "m!pomoc") {
+       let embed = new Discord.MessageEmbed()
+      .setDescription("**POMOC**")
+      .addField ("**MODERACJA**", "Pracujemy nad tym!")
+      .addField ("**4FUN**", "m!legia")
+      .addField ("**PROPOZYCJE**", "m!propozycja, m!propozycja_anonim")
+      .addField ("**INNE**", "m!zapros")
+    }
 
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
