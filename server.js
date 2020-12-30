@@ -33,8 +33,7 @@ bot.on("message", (message) => {
       .addField ("**MODERACJA**", "Pracujemy nad tym!")
       .addField ("**4FUN**", "m!legia")
       .addField ("**PROPOZYCJE**", "m!propozycja, m!propozycja_anonim")
-      .addField ("**ZAPROŚ BOTA**", "https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=351297&scope=bot")
-    }
+     }
 
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
