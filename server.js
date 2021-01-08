@@ -30,8 +30,11 @@ bot.on("message", (message) => {
    if (cmd == "pomoc") {  
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
-      embed.setDescription(`Pomoc`)
-      embed.addField(`test`, `test`)
+      embed.setTitle(`**Pomoc**`)
+      embed.addField(`Komendy moderacyjne`, `Pracujemy nad tym :eyes:`)
+      embed.addField(`Komendy 4FUN`, `m!legia`)
+      embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
+      embed.addField(`ameeen`, `reszty komend nie pamiętam, za wszystkie serdecznie żałuje`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
       message.channel.send(embed).then(embedMessage => {
       });
