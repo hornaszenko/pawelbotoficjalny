@@ -43,6 +43,7 @@ bot.on("message", (message) => {
     else if (cmd == "international") {
        const args = message.content.slice(15).trim().split(/ +/g);
        let wiadomosc = args.slice(0).join(" ");
+       message.delete();
        message.channel = message.client.channels.cache.get('797163683666985055');
        message.channel.send(wiadomosc)
     }
