@@ -73,7 +73,10 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
-   
+    else if (cmd == "mójawatar" {
+        message.channel.send(message.author.displayAvatarURL());
+  }
+});
     else {
       return;
     }  
