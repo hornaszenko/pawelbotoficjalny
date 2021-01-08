@@ -73,14 +73,13 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
-    else if (cmd == "zagraj") {
-      const args = message.content.slice(6).trim().split(/ +/g);
-      let sansgranie = args.slice(0).join(" ");
-      message.react("✅")
-      .then(connection => {
-      connection.play(sansgranie);
-      });
-    }
+    else if (cmd == "invite") {
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(`[Link](https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=384064&scope=bot)`)
+     });
+    } 
+  
     else {
       return;
     }  
