@@ -28,17 +28,12 @@ bot.on("message", (message) => {
     args.splice(0, 2);
     
    if (cmd == "pomoc") {  
-      const args = message.content.slice(12).trim().split(/ +/g);
-      let suggestion = args.slice(0).join(" ");
-      message.delete();
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
-      embed.setDescription(suggestion)
-      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji: ${message.author.tag}.`)
+      embed.setDescription(`Pomoc`)
+      embed.addField(`test`, `test`)
+      embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
       message.channel.send(embed).then(embedMessage => {
-        embedMessage.react("🟩");
-        embedMessage.react("🟨");
-        embedMessage.react("🟥");
       });
     }
     
