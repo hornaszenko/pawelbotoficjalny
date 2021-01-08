@@ -27,7 +27,7 @@ bot.on("message", (message) => {
     let cmd = args[0];
     args.splice(0, 2);
     
-   else if (cmd == "pomoc") {  
+   if (cmd == "pomoc") {  
       const args = message.content.slice(12).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
       message.delete();
