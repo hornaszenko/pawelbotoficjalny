@@ -46,7 +46,7 @@ bot.on("message", (message) => {
        message.delete();
        message.channel = message.client.channels.cache.get('797163683666985055');
        message.channel.kraina = message.client.channels.cache.get('797167770756186153');
-       message.channel.send( + `napisał` + ` ` +`**` + wiadomosc + `**`)
+       message.channel.send(`${message.author.tag}` + `napisał` + ` ` +`**` + wiadomosc + `**`)
        message.channel.kraina.send(`${message.author.tag}` + `napisał` + ` ` + `**` + wiadomosc + `**`)
     }
    
