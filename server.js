@@ -45,9 +45,9 @@ bot.on("message", (message) => {
        let wiadomosc = args.slice(0).join(" ");
        message.delete();
        message.channel = message.client.channels.cache.get('797163683666985055');
-       message.channel.2 = message.client.channels.cache.get('797167770756186153');
+       message.channel.kraina = message.client.channels.cache.get('797167770756186153');
        message.channel.send(wiadomosc)
-       message.channel.2.send(wiadomosc)
+       message.channel.kraina.send(wiadomosc)
     }
    
       
