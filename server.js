@@ -73,7 +73,14 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
-
+    else if (cmd == "zagraj") {
+      const args = message.content.slice(6).trim().split(/ +/g);
+      let sansgranie = args.slice(0).join(" ");
+      voiceChannel.join()
+      .then(connection => {
+      connection.play(sansgranie);
+      });
+    }
     else {
       return;
     }  
