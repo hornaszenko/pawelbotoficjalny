@@ -27,13 +27,21 @@ bot.on("message", (message) => {
     let cmd = args[0];
     args.splice(0, 2);
     
-       if (cmd == "help") {
-       let embed = new Discord.MessageEmbed()
-      .setDescription("**POMOC**")
-      .addField ("**4FUN**", "m!legia")
-      .addField ("**PROPOZYCJE**", "m!propozycja, m!propozycja_anonim")
-     }
-
+   else if (cmd == "pomoc") {  
+      const args = message.content.slice(12).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`🟩 - tak, 🟨 - nie mam zdania, 🟥 - nie. Twórca propozycji: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🟩");
+        embedMessage.react("🟨");
+        embedMessage.react("🟥");
+      });
+    }
+    
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
