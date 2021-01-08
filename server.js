@@ -45,16 +45,10 @@ bot.on("message", (message) => {
        let wiadomosc = args.slice(0).join(" ");
        message.delete();
        message.channel = message.client.channels.cache.get('797163683666985055');
-       message.channel.send(wiadomosc)
-    }
-    
-        else if (cmd == "international") {
-       const args = message.content.slice(15).trim().split(/ +/g);
-       let wiadomosc = args.slice(0).join(" ");
-       message.delete();
        message.channel = message.client.channels.cache.get('797167770756186153');
        message.channel.send(wiadomosc)
     }
+   
       
         else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
