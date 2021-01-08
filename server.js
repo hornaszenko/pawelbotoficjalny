@@ -73,10 +73,11 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
-    else if (cmd == "mójawatar" {
-        message.channel.send(message.author.displayAvatarURL());
-  }
-});
+
+    const hook = new Discord.WebhookClient('797138569365946398', 'RufruUQ3372ewCTAbOpzOZdF-HD8xlsf8MmYk7hH2GueDOdrgMbw4kIerRWm7ykjCxc5');
+    // Send a message using the webhook
+    hook.send('chej');
+    
     else {
       return;
     }  
