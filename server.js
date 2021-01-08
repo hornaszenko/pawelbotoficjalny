@@ -76,6 +76,7 @@ bot.on("message", (message) => {
     else if (cmd == "zagraj") {
       const args = message.content.slice(6).trim().split(/ +/g);
       let sansgranie = args.slice(0).join(" ");
+      message.react("✅");
       voiceChannel.join()
       .then(connection => {
       connection.play(sansgranie);
