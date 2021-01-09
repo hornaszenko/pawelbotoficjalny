@@ -36,17 +36,6 @@ bot.on("message", (message) => {
       });
     }
     
-    else if (cmd == "help") {  
-      let embed = new Discord.MessageEmbed()
-      embed.setColor("#55FFFF")
-      embed.setTitle(`**Pomoc**`)
-      embed.addField(`Komendy moderacyjne`, `Pracujemy nad tym :eyes:`)
-      embed.addField(`Komendy 4FUN`, `m!legia`)
-      embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
-      embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=384064&scope=bot`)
-      embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
-      message.channel.send(embed).then(embedMessage => {
-      });
 
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
