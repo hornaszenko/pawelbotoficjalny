@@ -36,9 +36,12 @@ bot.on("message", (message) => {
       });
     }
     
-
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
+    }
+
+    else if (cmd == "☆♡♤◇♧") {
+       message.channel.send(`**GRATULACJE** twój iPhone 2137 od Microsoftu juz w dostawie!!`)
     }
     
     else if (cmd == "international") {
