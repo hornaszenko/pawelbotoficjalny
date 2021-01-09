@@ -92,4 +92,4 @@ bot.on("message", (message) => {
 
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 
-bot.login("Nzg5NDE3MzcxODA5ODczOTQw.X9xwOA.dYfB9LcYGiToq1WMclcZymUjOIc"); 
+bot.login(process.env.TOKEN); 
