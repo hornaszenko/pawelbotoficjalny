@@ -45,11 +45,13 @@ bot.on("message", (message) => {
        let wiadomosc = args.slice(0).join(" ");
        message.delete();
        message.channel = message.client.channels.cache.get('797163683666985055');
+       message.channel.donald = message.client.channels.cache.get('797409837608075274');
        message.channel.kraina = message.client.channels.cache.get('797167770756186153');
        message.channel.kenaj = message.client.channels.cache.get('797196573452533801');
        message.channel.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.kraina.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.kenaj.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
+       message.channel.donald.send(`${message.author.tag}`
     }
    
       
