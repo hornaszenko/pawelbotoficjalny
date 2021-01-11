@@ -17,9 +17,9 @@ bot.on("message", (message) => {
     message.react('😹');
   }
    
-     prefix = "m!"
+     
   
-  if (msg.substring(0, 2) == prefix) {
+  if (msg.substring(0, 2) == "m!") {
     let str = msg.substring(2, msg.length);
     let args = str.split(' ');
     let cmd = args[0];
