@@ -37,12 +37,12 @@ bot.on("message", (message) => {
       });
     }
     else if (cmd = "kick") {
-    run: async (client, message, args) => {
+  
         if (!message.member.hasPermission("KICK_MEMBERS")) {
             message.channel.send(":x: Nie masz odopowiednich uprawnień!");
         }
         else {
-            if(!message.mentions.users.first()){
+            if (!message.mentions.users.first()){
                 message.channel.send(":x: Nie oznaczyłeś żadnego użytkownika.")
                 return;
             }
