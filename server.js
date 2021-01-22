@@ -31,7 +31,7 @@ bot.on("message", (message) => {
       embed.addField(`Komendy moderacyjne`, `m!kick`)
       embed.addField(`Komendy 4FUN`, `m!legia`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
-      embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=384064&scope=bot`)
+      embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
       message.channel.send(embed).then(embedMessage => {
       });
