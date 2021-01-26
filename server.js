@@ -106,4 +106,4 @@ const client = new Discord.Client();
 
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 
-
+bot.login(process.env.TOKEN); 
