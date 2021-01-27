@@ -15,37 +15,6 @@ bot.on("message", (message) => {
     message.react('😂');
     message.react('😹');
   }
-
-     client.on('message', async message => {
-  // Voice only works in guilds, if the message does not come from a guild,
-  // we ignore it
-  if (!message.guild) return;
-
-  if (message.content === 'm!dolacz') {
-    // Only try to join the sender's voice channel if they are in one themselves
-    if (message.member.voice.channel) {
-      const connection = await message.member.voice.channel.join();
-    } else {
-      message.channel.send(':x: Musisz najpierw dołączyć do jakiegoś kanału głosowego!');
-    }
-  }
-});
-
-const dispatcher = connection.play('/home/discord/audio.mp3');
-dispatcher.pause();
-dispatcher.resume();
-
-dispatcher.setVolume(0.5); // half the volume
-
-dispatcher.on('finish', () => {
-  console.log('Finished playing!');
-});
-
-dispatcher.destroy(); // end the stream
-  
-  const dispatcher = connection.play('http://www.sample-videos.com/audio/mp3/wave.mp3');, {
-  volume: 0.5,
-});
   
   if (msg.substring(0, 2) == "m!") {
     let str = msg.substring(2, msg.length);
