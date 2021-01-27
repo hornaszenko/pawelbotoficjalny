@@ -1,10 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
 bot.on("ready", () => {
   console.log(bot.user.tag + " is ready!");
 });
-
+  
 bot.on("message", (message) => {
   let msg = message.content;
   if (message.author.bot) return;
@@ -15,6 +14,7 @@ bot.on("message", (message) => {
     message.react('😂');
     message.react('😹');
   }
+   
   
   if (msg.substring(0, 2) == "m!") {
     let str = msg.substring(2, msg.length);
@@ -34,11 +34,9 @@ bot.on("message", (message) => {
       message.channel.send(embed).then(embedMessage => {
       });
     }
-
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
-
     else if (cmd == "☆♡♤◇♧") {
        message.channel.send(`**GRATULACJE** twój iPhone 2137 od Microsoftu juz w dostawie!!`)
     }
@@ -87,15 +85,11 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
-
   
     else {
       return;
     }  
   }       
 });
-
-
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
-
 bot.login(process.env.TOKEN); 
