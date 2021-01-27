@@ -95,11 +95,6 @@ bot.on("message", (message) => {
   }       
 });
 
-+ const fs = require('fs');
-const Discord = require('discord.js');
-
-const client = new Discord.Client();
-+ client.commands = new Discord.Collection();
 
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 
