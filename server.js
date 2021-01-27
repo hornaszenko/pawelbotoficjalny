@@ -15,10 +15,38 @@ bot.on("message", (message) => {
     message.react('😂');
     message.react('😹');
   }
-   
-  if (message.content == "Xd") {
-    message.channel.send("Serio, mało rzeczy mnie triggeruje tak jak to chore „Xd”. Kombinacji x i d można używać na wiele wspaniałych sposobów. Coś cię śmieszy? Stawiasz „xD”. Coś się bardzo śmieszy? Śmiało: „XD”! Coś doprowadza Cię do płaczu ze śmiechu? „XDDD” i załatwione. Uśmiechniesz się pod nosem? „xd”. Po kłopocie. A co ma do tego ten bękart klawiaturowej ewolucji, potwór i zakała ludzkiej estetyki - „Xd”? Co to w ogóle ma wyrażać? Martwego człowieka z wywalonym jęzorem? Powiem Ci, co to znaczy. To znaczy, że masz w telefonie włączone zaczynanie zdań dużą literą, ale szkoda Ci klikać capsa na jedno „d” później. Korona z głowy spadnie? Nie sondze. „Xd” to symptom tego, że masz mnie, jako rozmówcę, gdzieś, bo Ci się nawet kliknąć nie chce, żeby mi wysłać poprawny emotikon. Szanujesz mnie? Używaj „xd”, „xD”, „XD”, do wyboru. Nie szanujesz mnie? Okaż to. Wystarczy, że wstawisz to zjebane „Xd” w choć jednej wiadomości. Nie pozdrawiam")
 
+     client.on('message', async message => {
+  // Voice only works in guilds, if the message does not come from a guild,
+  // we ignore it
+  if (!message.guild) return;
+
+  if (message.content === 'm!dolacz') {
+    // Only try to join the sender's voice channel if they are in one themselves
+    if (message.member.voice.channel) {
+      const connection = await message.member.voice.channel.join();
+    } else {
+      message.channel.send(':x: Musisz najpierw dołączyć do jakiegoś kanału głosowego!');
+    }
+  }
+});
+
+const dispatcher = connection.play('/home/discord/audio.mp3');
+dispatcher.pause();
+dispatcher.resume();
+
+dispatcher.setVolume(0.5); // half the volume
+
+dispatcher.on('finish', () => {
+  console.log('Finished playing!');
+});
+
+dispatcher.destroy(); // end the stream
+  
+  const dispatcher = connection.play('http://www.sample-videos.com/audio/mp3/wave.mp3');, {
+  volume: 0.5,
+});
+  
   if (msg.substring(0, 2) == "m!") {
     let str = msg.substring(2, msg.length);
     let args = str.split(' ');
