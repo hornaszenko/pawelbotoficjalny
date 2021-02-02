@@ -55,13 +55,11 @@ bot.on("message", (message) => {
       else if (cmd == "losowykolor") {
             const randomBetween = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
             const color = [
-            randomBetween(0, 255),
-            randomBetween(0, 255),
-            randomBetween(0, 255),
+            randomBetween(`#008000`, `#E50000`),
           ];
        let embed = new Discord.MessageEmbed()
        embed.setColor(color)
-       embed.setDescription(`Losowy kolor`)
+       embed.setDescription(color)
            message.channel.send(embed).then(embedMessage => {
       });
     }
