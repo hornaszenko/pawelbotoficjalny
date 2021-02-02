@@ -61,7 +61,7 @@ bot.on("message", (message) => {
           ];
        let embed = new Discord.MessageEmbed()
        embed.setColor(color)
-       embed.setDescription(color)
+       embed.setDescription(`Losowy kolor`)
            message.channel.send(embed).then(embedMessage => {
       });
     }
