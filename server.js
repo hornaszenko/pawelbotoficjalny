@@ -27,7 +27,7 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
-      embed.addField(`Komendy 4FUN`, `m!legia`)
+      embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
@@ -40,7 +40,7 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
-      embed.addField(`Komendy 4FUN`, `m!legia`)
+      embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
@@ -51,6 +51,21 @@ bot.on("message", (message) => {
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
+
+      else if (cmd == "losowykolor") {
+            const randomBetween = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
+            const color = [
+            randomBetween(0, 255),
+            randomBetween(0, 255),
+            randomBetween(0, 255),
+          ];
+       let embed = new Discord.MessageEmbed()
+       embed.setColor(color)
+       embed.setDescription(color)
+           message.channel.send(embed).then(embedMessage => {
+      });
+    }
+    
     else if (cmd == "☆♡♤◇♧") {
        message.channel.send(`**GRATULACJE** twój iPhone 2137 od Microsoftu juz w dostawie!!`)
     }
