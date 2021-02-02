@@ -26,7 +26,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setTitle(`**Pomoc**`)
-      embed.addField(`Komendy moderacyjne`, `m!kick`)
+      embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
       embed.addField(`Komendy 4FUN`, `m!legia`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
