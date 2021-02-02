@@ -67,7 +67,19 @@ bot.on("message", (message) => {
            message.channel.send(embed).then(embedMessage => {
       });
     }
-    
+	
+    else if (cmd == "kotek") {
+		try {
+			get('https://aws.random.cat/meow').then(res => {
+				const embed = new Discord.MessageEmbed()
+				.setImage(res.body.file)
+				return message.channel.send({embed});
+			});
+		} catch(err) {
+			return message.channel.send(err.stack);
+		}
+	}
+
     else if (cmd == "☆♡♤◇♧") {
        message.channel.send(`**GRATULACJE** twój iPhone 2137 od Microsoftu juz w dostawie!!`)
     }
