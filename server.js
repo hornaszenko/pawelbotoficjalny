@@ -26,7 +26,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setTitle(`**Pomoc**`)
-      embed.addField(`Komendy moderacyjne`, `:eyes: Dalej pracujemy...`)
+      embed.addField(`Komendy moderacyjne`, `Ludzie przecież tu nikogo nie ma`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
       embed.addField(`Propozycje i ankiety`, `m!propozycja, m!propozycja_anonim, m!ankieta, m!ankieta_anonim, m!ankieta+1-6`)
       embed.addField(`International`, `m!international, m!international_anonim`)   
@@ -40,7 +40,7 @@ bot.on("message", (message) => {
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setTitle(`**Pomoc**`)
-      embed.addField(`Komendy moderacyjne`, `:eyes: Dalej pracujemy...`)
+      embed.addField(`Komendy moderacyjne`, `Ludzie przecież tu nikogo nie ma`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
       embed.addField(`Propozycje i ankiety`, `m!propozycja, m!ankieta, m!ankieta_anonim, m!ankieta+1-6`)
       embed.addField(`International`, `m!international, m!international_anonim`) 
@@ -60,9 +60,8 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - aktualizacja m!pomoc/help")
+       message.channel.send("Aktualizacja powiodła się - hello your computer has virus")
     }
-
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
@@ -78,6 +77,7 @@ bot.on("message", (message) => {
          randomBetween(0, 255),
          randomBetween(0, 255),
         ];
+	      
        let embed = new Discord.MessageEmbed()
        embed.setColor(color)
        embed.setDescription(color)
@@ -272,10 +272,48 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
+	  
+   else if (cmd == "kick") {  
+        if(message.channel.type === 'DM') {
+            //First check if message channel is not direct message, because you cant kick out of guide 
+            message.channel.send('Tej komendy można używać tylko na serwerze.');
+            return;
+        };
+        //Then check if user have permissions to do that
+        if(!message.member.hasPermission('KICK_MEMBERS')) {
+            message.channel.send('Nie masz odpowiednich permisji do wyrzucenia użytkownika.');
+            return;
+        };
+        //const a member, wich you need yo kick (its fist mention message member)
+        let mentionMember = message.mentions.members.first();
+        //If user dont mention a member, that show him this error msg
+        if(!mentionMember) {
+            message.channel.send('Oznacz najpierw osobę którą chcesz wyrzucić');
+            return;
+        }
+        //Get the highest role of user for compare
+        let authorHighestRole = message.member.highestRole.position;
+        let mentionHighestRole = mentionMember.highestRole.position;
+        //If mention user have same or higher role, so show this error msg
+        if(mentionHighestRole >= authorHighestRole) {
+            message.channel.send('Nie możesz wyrzucić użytkownika z wyższą rangą niż ty!');
+            return;
+        };
+        //Check if your bot can`t kick this user, so that show this error msg 
+        if(!mentionMember.kickable) {
+            message.channel.send(':x: Nie mam permisji do wyrzucenia użytkownika.');
+            return
+        };
 
+        mentionMember.kick().then(() => message.channel.send(":white_check_mark: Wyrzucono użytkownika z serwera!"))
+    };
+})
+}
     else {
       return;
     }  
+  }       
+});
   });
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 bot.login(`Nzg5NDE3MzcxODA5ODczOTQw.X9xwOA.dYfB9LcYGiToq1WMclcZymUjOIc`); 
