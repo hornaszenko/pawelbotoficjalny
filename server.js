@@ -86,6 +86,24 @@ bot.on("message", (message) => {
       });
     }
 	
+     else if (cmd == "lotto") {
+        const randomBetween = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
+         const wyniki = [
+         randomBetween(0, 40),
+	 randomBetween(0, 40),
+	 randomBetween(0, 40),
+	 randomBetween(0, 40),
+	 randomBetween(0, 40),
+	 randomBetween(0, 40),	 
+         ];
+	 let embed = new Discord.MessageEmbed()
+       embed.setColor()
+       embed.setTitle(`Wyniki losowania Lotto`)     
+       embed.setDescription(wyniki)
+       embed.setFooter(`Lotto jest przeznaczone dla serwera Demokratyczna Republika Serdowny - https://discord.gg/x3G2Pn75 , 1 liczba - nic, 2 liczby - 4SD, 3 liczby - 1000SD, 4 liczby - 10,000 SD, 5 liczb - 100,000 SD, 6 liczb - 1,000,000 SD `)
+           message.channel.send(embed).then(embedMessage => {
+      });
+    }
 	  
     else if (cmd == "☆♡♤◇♧") {
        message.channel.send(`**GRATULACJE** twój iPhone 2137 od Microsoftu juz w dostawie!!`)
