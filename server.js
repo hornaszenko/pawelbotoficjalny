@@ -61,7 +61,7 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - m!kick, czyli finalnie komendy moderacyjne")
+       message.channel.send("Aktualizacja powiodła się - github to chujstwo jesli to sie nie zaladuje")
     }
  
     else if (cmd == "legia") {
@@ -314,9 +314,10 @@ bot.on("message", (message) => {
 
         //If all steps are completed successfully try kick this user
         mentionMember.kick()
-            .then(() => message.channel.send(":white_check_mark: Wyrzucono użytkownika z serwera!")
+        .then(() => message.channel.send(":white_check_mark: Wyrzucono użytkownika z serwera!")
     };
 })
+	   
     else {
       return;
     }  
