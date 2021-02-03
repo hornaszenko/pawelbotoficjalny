@@ -60,8 +60,7 @@ bot.on("message", (message) => {
       message.channel.send(embed).then(embedMessage => {
       });
     }  
-	   else if (cmd == "aktualizacja") {
-	   if (message.author.id === "761858068321140757"){   
+	   else if (cmd == "aktualizacja") { 
        message.channel.send("Aktualizacja: powiodła się - dodano ankiety")
     }
  
