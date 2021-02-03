@@ -61,7 +61,7 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - github to chujstwo jesli to sie nie zaladuje")
+       message.channel.send("Aktualizacja powiodła się - bez komentarza")
     }
  
     else if (cmd == "legia") {
@@ -318,7 +318,7 @@ bot.on("message", (message) => {
     };
 })
 	   
-    else {
+        else {
       return;
     }  
   }       
