@@ -40,7 +40,7 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
-      embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech, m!kotek`)
+      embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.  Aktualizacja: powiodła się - 1`)
