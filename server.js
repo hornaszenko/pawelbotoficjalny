@@ -4,7 +4,6 @@ bot.on("ready", () => {
   console.log(bot.user.tag + " is ready!");
 });
   
-
 bot.on("message", (message) => {
   let msg = message.content;
   if (message.author.bot) return;
@@ -61,9 +60,9 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - bez komentarza")
+       message.channel.send("Aktualizacja powiodła się - m!kick, czyli finalnie komendy moderacyjne")
     }
- 
+
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
@@ -79,7 +78,6 @@ bot.on("message", (message) => {
          randomBetween(0, 255),
          randomBetween(0, 255),
         ];
-
        let embed = new Discord.MessageEmbed()
        embed.setColor(color)
        embed.setDescription(color)
@@ -274,7 +272,7 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
-  
+
    else if (cmd == "kick") {  
         if(message.channel.type === 'DM') {
             //First check if message channel is not direct message, because you cant kick out of guide 
@@ -314,11 +312,10 @@ bot.on("message", (message) => {
 
         //If all steps are completed successfully try kick this user
         mentionMember.kick()
-        .then(() => message.channel.send(":white_check_mark: Wyrzucono użytkownika z serwera!")
+            .then(() => message.channel.send(":white_check_mark: Wyrzucono użytkownika z serwera!")
     };
 })
-	   
-        else {
+    else {
       return;
     }  
   }       
