@@ -29,10 +29,10 @@ bot.on("message", (message) => {
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
-      embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
+      embed.addField(`Propozycje i ankiety`, `m!propozycja, m!propozycja_anonim, m!ankieta, m!ankieta_anonim, m!ankieta+1-5`)
       embed.addField(`International`, `m!international, m!international_anonim`)   
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
-      embed.setFooter(`Komenda wywołana przez: ${message.author.tag}. Aktualizacja: powiodła się - 1`)
+      embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
       message.channel.send(embed).then(embedMessage => {
       });
     }
@@ -43,14 +43,28 @@ bot.on("message", (message) => {
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
-      embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
+      embed.addField(`Propozycje i ankiety`, `m!propozycja, m!propozycja_anonim, m!ankieta, m!ankieta_anonim, m!ankieta+1-6`)
       embed.addField(`International`, `m!international, m!international_anonim`) 
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
-      embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.  Aktualizacja: powiodła się - 1`)
+      embed.setFooter(`Komenda wywołana przez: ${message.author.tag}. `)
       message.channel.send(embed).then(embedMessage => {
       });
     }
-    
+	  
+	    else if (cmd == "m!ankieta+1-6") {  
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setTitle(`**Dodanie opcji do ankiet**`)
+      embed.addField(`Dodaj opcje do ankiet!`,`m!ankieta+1, m!ankieta+2, m!ankieta+3, m!ankieta+4, m!ankieta+5, m!ankieta+6`)
+      embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+      });
+    }  
+	   else if (cmd == "aktualizacja") {
+	   if (message.author.id === "761858068321140757"){   
+       message.channel.send("Aktualizacja: powiodła się - dodano ankiety")
+    }
+ 
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
@@ -123,7 +137,130 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     }
-    
+	  
+            else if (cmd == "ankieta") {  
+      const args = message.content.slice(9).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+	      
+      });
+    }	
+	  
+      else if (cmd == "ankieta+1") {  
+      const args = message.content.slice(11).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+	embedMessage.react("🇨");      
+	      
+      });
+    }	
+      else if (cmd == "ankieta+2") {  
+      const args = message.content.slice(11).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+	embedMessage.react("🇨");
+	embedMessage.react("🇩");
+	      
+      });
+    }
+	  
+	 else if (cmd == "ankieta+3") {  
+      const args = message.content.slice(11).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+	embedMessage.react("🇨");
+	embedMessage.react("🇩");
+	embedMessage.react("🇪");
+	      
+      });
+    }  
+    	 else if (cmd == "ankieta+4") {  
+      const args = message.content.slice(11).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+	embedMessage.react("🇨");
+	embedMessage.react("🇩");
+	embedMessage.react("🇪");
+	embedMessage.react("🇫");
+	      
+      });
+    }  
+	  
+	      	 else if (cmd == "ankieta+5") {  
+      const args = message.content.slice(11).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+	embedMessage.react("🇨");
+	embedMessage.react("🇩");
+	embedMessage.react("🇪");
+	embedMessage.react("🇫");
+	embedMessage.react("🇬");      
+	      
+      });
+    }  
+	  
+	  else if (cmd == "ankieta+6") {  
+      const args = message.content.slice(11).trim().split(/ +/g);
+      let suggestion = args.slice(0).join(" ");
+      message.delete();
+      let embed = new Discord.MessageEmbed()
+      embed.setColor("#55FFFF")
+      embed.setDescription(suggestion)
+      embed.setFooter(`Twórca ankiety: ${message.author.tag}.`)
+      message.channel.send(embed).then(embedMessage => {
+        embedMessage.react("🅰️");
+        embedMessage.react("🅱️");
+	embedMessage.react("🇨");
+	embedMessage.react("🇩");
+	embedMessage.react("🇪");
+	embedMessage.react("🇫");
+	embedMessage.react("🇬");  
+	embedMessage.react("🇭");  
+      });
+    }  
+	  
     else if (cmd == "propozycja_anonim") {  
       const args = message.content.slice(19).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
