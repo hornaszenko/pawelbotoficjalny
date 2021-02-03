@@ -305,15 +305,12 @@ bot.on("message", (message) => {
             return
         };
 
-        mentionMember.kick().then(() => message.channel.send(":white_check_mark: Wyrzucono użytkownika z serwera!"))
+   mentionMember.kick().then(() => message.channel.send(":white_check_mark: Wyrzucono użytkownika z serwera!"))
     };
-})
 }
     else {
       return;
     }  
-  }       
-});
   });
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
 bot.login(`Nzg5NDE3MzcxODA5ODczOTQw.X9xwOA.dYfB9LcYGiToq1WMclcZymUjOIc`); 
