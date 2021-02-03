@@ -4,13 +4,6 @@ bot.on("ready", () => {
   console.log(bot.user.tag + " is ready!");
 });
   
- bot.user.setPresence({
-    status: 'online',
-    activity: {
-        name: 'Wpisz m!pomoc po komendy bota.',
-        type: 'PLAYING',
-    }
-})
 
 bot.on("message", (message) => {
   let msg = message.content;
@@ -37,6 +30,7 @@ bot.on("message", (message) => {
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
+      embed.addField(`International`, `m!international, m!international_anonim`)   
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}. Aktualizacja: powiodła się - 1`)
       message.channel.send(embed).then(embedMessage => {
@@ -50,6 +44,7 @@ bot.on("message", (message) => {
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
+      embed.addField(`International`, `m!international, m!international_anonim`) 
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.  Aktualizacja: powiodła się - 1`)
       message.channel.send(embed).then(embedMessage => {
@@ -98,6 +93,20 @@ bot.on("message", (message) => {
        message.channel.kenaj.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.donald.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
     }
+	  
+         else if (cmd == "international_anonim") {
+       const args = message.content.slice(22).trim().split(/ +/g);
+       let wiadomosc = args.slice(0).join(" ");
+       message.delete();
+       message.channel = message.client.channels.cache.get('797163683666985055');
+       message.channel.donald = message.client.channels.cache.get('797409837608075274');
+       message.channel.kraina = message.client.channels.cache.get('797167770756186153');
+       message.channel.kenaj = message.client.channels.cache.get('797196573452533801');
+       message.channel.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
+       message.channel.kraina.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
+       message.channel.kenaj.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
+       message.channel.donald.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
+    }	  
    
       
         else if (cmd == "propozycja") {  
