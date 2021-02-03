@@ -89,12 +89,12 @@ bot.on("message", (message) => {
      else if (cmd == "lotto") {
         const randomBetween = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
          const wyniki = [
-         randomBetween(0, 40),
-	 randomBetween(0, 40),
-	 randomBetween(0, 40),
-	 randomBetween(0, 40),
-	 randomBetween(0, 40),
-	 randomBetween(0, 40),	 
+         randomBetween(1, 40),
+	 randomBetween(1, 40),
+	 randomBetween(1, 40),
+	 randomBetween(1, 40),
+	 randomBetween(1, 40),
+	 randomBetween(1, 40),	 
          ];
 	 let embed = new Discord.MessageEmbed()
        embed.setColor()
