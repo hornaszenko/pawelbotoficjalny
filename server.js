@@ -43,7 +43,7 @@ bot.on("message", (message) => {
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
-      embed.addField(`Propozycje i ankiety`, `m!propozycja, m!propozycja_anonim, m!ankieta, m!ankieta_anonim, m!ankieta+1-6`)
+      embed.addField(`Propozycje i ankiety`, `m!propozycja, m!ankieta, m!ankieta_anonim, m!ankieta+1-6`)
       embed.addField(`International`, `m!international, m!international_anonim`) 
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}. `)
@@ -61,7 +61,7 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja: powiodła się - dodano ankiety")
+       message.channel.send("Aktualizacja: powiodła się - nie będzie jednak ankiety anonim jak pisze w help")
     }
  
     else if (cmd == "legia") {
