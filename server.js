@@ -28,7 +28,7 @@ bot.on("message", (message) => {
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Ludzie przecież tu nikogo nie ma`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
-      embed.addField(`Propozycje i ankiety`, `m!propozycja, m!propozycja_anonim, m!ankieta, m!ankieta_anonim, m!ankieta+1-6`)
+      embed.addField(`Propozycje i ankiety`, `m!propozycja, m!propozycja_anonim, m!ankieta, m!ankieta+1-6`)
       embed.addField(`International`, `m!international, m!international_anonim`)   
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
@@ -42,8 +42,9 @@ bot.on("message", (message) => {
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Ludzie przecież tu nikogo nie ma`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
-      embed.addField(`Propozycje i ankiety`, `m!propozycja, m!ankieta, m!ankieta_anonim, m!ankieta+1-6`)
+      embed.addField(`Propozycje i ankiety`, `m!propozycja, m!ankieta, m!ankieta+1-6`)
       embed.addField(`International`, `m!international, m!international_anonim`) 
+      embed.addField(`Inne`, `m!reactbyid`) 
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}. `)
       message.channel.send(embed).then(embedMessage => {
@@ -60,7 +61,7 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - hello your computer has virus")
+       message.channel.send("Aktualizacja powiodła się - m!reactbyid")
     }
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
@@ -272,6 +273,11 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
+    else if (cmd == "reactbyid")
+       const args = message.content.slice(11).trim().split(/ +/g);
+       let id = args.slice(0).join(" ");	    
+       const emoji = bot.emojis.cache.get(id)
+       message.react(emoji)  
 	  
    else if (cmd == "kick") {  
         if(message.channel.type === 'DM') {
