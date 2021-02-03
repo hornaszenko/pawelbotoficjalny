@@ -44,7 +44,6 @@ bot.on("message", (message) => {
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
       embed.addField(`Propozycje i ankiety`, `m!propozycja, m!ankieta, m!ankieta+1-6`)
       embed.addField(`International`, `m!international, m!international_anonim`) 
-      embed.addField(`Inne`, `m!reactbyid`) 
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}. `)
       message.channel.send(embed).then(embedMessage => {
@@ -273,48 +272,8 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
-    else if (cmd == "reactbyid")
-       const args = message.content.slice(11).trim().split(/ +/g);
-       let id = args.slice(0).join(" ");	    
-       const emoji = bot.emojis.cache.get(id)
-       message.react(emoji)  
-	  
-   else if (cmd == "kick") {  
-        if(message.channel.type === 'DM') {
-            //First check if message channel is not direct message, because you cant kick out of guide 
-            message.channel.send('Tej komendy można używać tylko na serwerze.');
-            return;
-        };
-        //Then check if user have permissions to do that
-        if(!message.member.hasPermission('KICK_MEMBERS')) {
-            message.channel.send('Nie masz odpowiednich permisji do wyrzucenia użytkownika.');
-            return;
-        };
-        //const a member, wich you need yo kick (its fist mention message member)
-        let mentionMember = message.mentions.members.first();
-        //If user dont mention a member, that show him this error msg
-        if(!mentionMember) {
-            message.channel.send('Oznacz najpierw osobę którą chcesz wyrzucić');
-            return;
-        }
-        //Get the highest role of user for compare
-        let authorHighestRole = message.member.highestRole.position;
-        let mentionHighestRole = mentionMember.highestRole.position;
-        //If mention user have same or higher role, so show this error msg
-        if(mentionHighestRole >= authorHighestRole) {
-            message.channel.send('Nie możesz wyrzucić użytkownika z wyższą rangą niż ty!');
-            return;
-        };
-        //Check if your bot can`t kick this user, so that show this error msg 
-        if(!mentionMember.kickable) {
-            message.channel.send(':x: Nie mam permisji do wyrzucenia użytkownika.');
-            return
-        };
 
-   mentionMember.kick().then(() => message.channel.send(":white_check_mark: Wyrzucono użytkownika z serwera!"))
-    };
-}
-    else {
+     else {
       return;
     }  
   });
