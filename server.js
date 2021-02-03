@@ -4,6 +4,14 @@ bot.on("ready", () => {
   console.log(bot.user.tag + " is ready!");
 });
   
+ bot.user.setPresence({
+    status: 'online',
+    activity: {
+        name: 'Wpisz m!pomoc po komendy bota.',
+        type: 'PLAYING',
+    }
+})
+
 bot.on("message", (message) => {
   let msg = message.content;
   if (message.author.bot) return;
