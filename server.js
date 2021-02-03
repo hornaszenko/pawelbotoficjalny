@@ -27,7 +27,7 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
-      embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
+      embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech, m!kotek`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
@@ -40,7 +40,7 @@ bot.on("message", (message) => {
       embed.setColor("#55FFFF")
       embed.setTitle(`**Pomoc**`)
       embed.addField(`Komendy moderacyjne`, `Dalej pracujemy nad tym... :eyes:`)
-      embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
+      embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech, m!kotek`)
       embed.addField(`Propozycje`, `m!propozycja, m!propozycja_anonim`)
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}.`)
@@ -72,18 +72,19 @@ bot.on("message", (message) => {
       });
     }
 	
-    else if (cmd == "kotek") {
-		try {
-			get('https://aws.random.cat/meow').then(res => {
-				const embed = new Discord.MessageEmbed()
-				.setImage(res.body.file)
-				return message.channel.send({embed});
-			});
-		} catch(err) {
-			return message.channel.send(err.stack);
-		}
-	}
+          else if (cmd == "kotek") {
+              // Array list of replies
+              const replies = ["https://media2.giphy.com/media/H4DjXQXamtTiIuCcRU/giphy.gif", "https://i.pinimg.com/originals/c3/2b/fa/c32bfa16bcf864e478d3ddfe32440268.gif", "https://i2.wp.com/dianaurban.com/wp-content/uploads/2017/07/01-cat-stretching-feet.gif?resize=500%2C399&ssl=1"];
+              // Random number from 0 to 2 for the array index
+              const random = Math.floor(Math.random() * 3);
 
+       let embed = new Discord.MessageEmbed()
+       .setImage(random)
+       embed.setFooter(`Gifów szukał hornaszenko | ąę#2137`)
+           message.channel.send(embed).then(embedMessage => {
+      });
+    }
+	  
     else if (cmd == "☆♡♤◇♧") {
        message.channel.send(`**GRATULACJE** twój iPhone 2137 od Microsoftu juz w dostawie!!`)
     }
