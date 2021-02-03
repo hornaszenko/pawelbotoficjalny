@@ -60,7 +60,7 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - bot dzialajacy")
+       message.channel.send("Aktualizacja powiodła się - lotto dla https://discord.gg/x3G2Pn75")
     }
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
