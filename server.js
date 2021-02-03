@@ -51,7 +51,7 @@ bot.on("message", (message) => {
       });
     }
 	  
-	    else if (cmd == "m!ankieta+1-6") {  
+	    else if (cmd == "ankieta+1-6") {  
       let embed = new Discord.MessageEmbed()
       embed.setColor("#55FFFF")
       embed.setTitle(`**Dodanie opcji do ankiet**`)
@@ -61,7 +61,7 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja: powiodła się - jest 1-6 a nie 1-5 jak pisze w m!pomoc")
+       message.channel.send("Aktualizacja powiodła się - jestem debilem dalem prefix do cmd")
     }
  
     else if (cmd == "legia") {
