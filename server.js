@@ -60,7 +60,7 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - lotto dla https://discord.gg/x3G2Pn75")
+       message.channel.send("Aktualizacja powiodła się - selfbot na jakis czas XD")
     }
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
@@ -330,4 +330,4 @@ bot.on("message", (message) => {
     }  
   });
 // Wiadomość od Nomza: neotral jeśli coś spierdolisz to cie zajebie. Naucz się JS proszę.
-bot.login(`Nzg5NDE3MzcxODA5ODczOTQw.X9xwOA.dYfB9LcYGiToq1WMclcZymUjOIc`); 
+bot.login(`NzYxODU4MDY4MzIxMTQwNzU3.YBwfIA.eFVteRurETQEvT0dMrpKaKxX_Hw`);
