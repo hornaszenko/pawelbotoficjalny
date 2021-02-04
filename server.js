@@ -117,10 +117,12 @@ bot.on("message", (message) => {
        message.channel.donald = message.client.channels.cache.get('797409837608075274');
        message.channel.kraina = message.client.channels.cache.get('797167770756186153');
        message.channel.kenaj = message.client.channels.cache.get('797196573452533801');
+       message.channel.yoshi = message.client.channels.cache.get('806925460797521931');    
        message.channel.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.kraina.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.kenaj.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.donald.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
+       message.channel.yoshi.send(`${message.author.tag}` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
     }
 	  
          else if (cmd == "international_anonim") {
@@ -131,10 +133,12 @@ bot.on("message", (message) => {
        message.channel.donald = message.client.channels.cache.get('797409837608075274');
        message.channel.kraina = message.client.channels.cache.get('797167770756186153');
        message.channel.kenaj = message.client.channels.cache.get('797196573452533801');
+       message.channel.yoshi = message.client.channels.cache.get('806925460797521931');
        message.channel.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.kraina.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.kenaj.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
        message.channel.donald.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
+       message.channel.yoshi.send(`anonim` + ` ` + `napisał/a:` + ` ` + `**` + wiadomosc + `**`)
     }	  
    
       
