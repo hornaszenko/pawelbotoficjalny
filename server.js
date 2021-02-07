@@ -14,6 +14,10 @@ bot.on("message", (message) => {
     message.react('😂');
     message.react('😹');
   }
+	
+    if (msg.toLowerCase() == "&2137") {
+     message.channel.send("ale debil z ciebie jesli sie z tego smiejesz")
+  }	
    
   
   if (msg.substring(0, 2) == "m!") {
@@ -60,7 +64,7 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - selfbot na jakis czas XD")
+       message.channel.send("Aktualizacja powiodła się - &2137 jest niesmieszne")
     }
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
