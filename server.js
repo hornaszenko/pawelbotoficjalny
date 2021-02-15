@@ -117,7 +117,6 @@ bot.on("message", (message) => {
        const args = message.content.slice(15).trim().split(/ +/g);
        let wiadomosc = args.slice(0).join(" ");
        message.delete();
-       message.channel = message.client.channels.cache.get('797163683666985055');
        message.channel.donald = message.client.channels.cache.get('797409837608075274');
        message.channel.kraina = message.client.channels.cache.get('797167770756186153');
        message.channel.kenaj = message.client.channels.cache.get('797196573452533801');
@@ -151,7 +150,6 @@ bot.on("message", (message) => {
        message.channel.yoshi.send(embed).then(embedMessage => {
       });
     }	  
-    }
 	  
          else if (cmd == "international_anonim") {
        const args = message.content.slice(22).trim().split(/ +/g);
