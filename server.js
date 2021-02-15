@@ -47,7 +47,6 @@ bot.on("message", (message) => {
       embed.addField(`Komendy moderacyjne`, `Ludzie przecież tu nikogo nie ma`)
       embed.addField(`Komendy 4FUN`, `m!legia, m!losowykolor, m!lech`)
       embed.addField(`Propozycje i ankiety`, `m!propozycja, m!ankieta, m!ankieta+1-6`)
-      embed.addField(`International`, `m!international, m!international_anonim`) 
       embed.addField(`Zaproszenie`, `https://discord.com/api/oauth2/authorize?client_id=789417371809873940&permissions=339009&scope=bot`)
       embed.setFooter(`Komenda wywołana przez: ${message.author.tag}. `)
       message.channel.send(embed).then(embedMessage => {
@@ -64,8 +63,9 @@ bot.on("message", (message) => {
       });
     }  
 	   else if (cmd == "aktualizacja") { 
-       message.channel.send("Aktualizacja powiodła się - &2137 jest niesmieszne")
+       message.channel.send("Aktualizacja powiodła się - International ni ma")
     }
+	  
     else if (cmd == "legia") {
        message.channel.send("to stara kurwa")
     }
@@ -112,86 +112,7 @@ bot.on("message", (message) => {
     else if (cmd == "☆♡♤◇♧") {
        message.channel.send(`**GRATULACJE** twój iPhone 2137 od Microsoftu juz w dostawie!!`)
     }
-    
-    else if (cmd == "international") {
-       const args = message.content.slice(15).trim().split(/ +/g);
-       let wiadomosc = args.slice(0).join(" ");
-       message.delete();
-       message.channel.donald = message.client.channels.cache.get('797409837608075274');
-       message.channel.kraina = message.client.channels.cache.get('797167770756186153');
-       message.channel.kenaj = message.client.channels.cache.get('797196573452533801');
-       message.channel.yoshi = message.client.channels.cache.get('806925460797521931');  
-	    
-        let embed = new Discord.MessageEmbed()
-       embed.setColor("#55FFFF")
-       embed.setDescription(wiadomosc)
-       embed.setFooter(`Wiadomość napisana przez: ${message.author.tag}`)
-       message.channel.kraina.send(embed).then(embedMessage => {
-      });
-		 
-       let embed = new Discord.MessageEmbed()
-       embed.setColor("#55FFFF")
-       embed.setDescription(wiadomosc)
-       embed.setFooter(`Wiadomość napisana przez: ${message.author.tag}`)
-       message.channel.kenaj.send(embed).then(embedMessage => {
-      });	 
        
-              let embed = new Discord.MessageEmbed()
-       embed.setColor("#55FFFF")
-       embed.setDescription(wiadomosc)
-       embed.setFooter(`Wiadomość napisana przez: ${message.author.tag}`)
-       message.channel.donald.send(embed).then(embedMessage => {
-      });
-	 
-       let embed = new Discord.MessageEmbed()
-       embed.setColor("#55FFFF")
-       embed.setDescription(wiadomosc)
-       embed.setFooter(`Wiadomość napisana przez: ${message.author.tag}`)
-       message.channel.yoshi.send(embed).then(embedMessage => {
-      });
-    }	  
-	  
-         else if (cmd == "international_anonim") {
-       const args = message.content.slice(22).trim().split(/ +/g);
-       let wiadomosc = args.slice(0).join(" ");
-       message.delete();
-       message.channel = message.client.channels.cache.get('797163683666985055');
-       message.channel.donald = message.client.channels.cache.get('797409837608075274');
-       message.channel.kraina = message.client.channels.cache.get('797167770756186153');
-       message.channel.kenaj = message.client.channels.cache.get('797196573452533801');
-       message.channel.yoshi = message.client.channels.cache.get('806925460797521931');
-       message.delete();
-		 
-       let embed = new Discord.MessageEmbed()
-       embed.setColor("#55FFFF")
-       embed.setDescription(wiadomosc)
-       embed.setFooter(`Wiadomość napisana przez: anonim`)
-       message.channel.kraina.send(embed).then(embedMessage => {
-      });
-		 
-       let embed = new Discord.MessageEmbed()
-       embed.setColor("#55FFFF")
-       embed.setDescription(wiadomosc)
-       embed.setFooter(`Wiadomość napisana przez: anonim`)
-       message.channel.kenaj.send(embed).then(embedMessage => {
-      });	 
-       
-              let embed = new Discord.MessageEmbed()
-       embed.setColor("#55FFFF")
-       embed.setDescription(wiadomosc)
-       embed.setFooter(`Wiadomość napisana przez: anonim`)
-       message.channel.donald.send(embed).then(embedMessage => {
-      });
-	 
-       let embed = new Discord.MessageEmbed()
-       embed.setColor("#55FFFF")
-       embed.setDescription(wiadomosc)
-       embed.setFooter(`Wiadomość napisana przez: anonim`)
-       message.channel.yoshi.send(embed).then(embedMessage => {
-      });
-    }	  
-   
-      
         else if (cmd == "propozycja") {  
       const args = message.content.slice(12).trim().split(/ +/g);
       let suggestion = args.slice(0).join(" ");
@@ -344,6 +265,7 @@ bot.on("message", (message) => {
         embedMessage.react("🟥");
       });
     } 
+	  
  else if (cmd == "kick") {  
         if(message.channel.type === 'DM') {
             //First check if message channel is not direct message, because you cant kick out of guide 
